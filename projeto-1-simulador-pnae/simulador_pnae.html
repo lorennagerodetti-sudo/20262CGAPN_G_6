@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulador de Repasse do PNAE — EMEB Vila Quitaúna</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:          #f5f4f0;
+  --surface:     #ffffff;
+  --surface2:    #eeedea;
+  --border:      #d8d6ce;
+  --border2:     #c2c0b8;
+  --text:        #1a1a18;
+  --text2:       #5e5d57;
+  --text3:       #9e9d97;
+  --blue:        #185fa5;
+  --blue-bg:     #e4f0fb;
+  --blue-text:   #0c3f7a;
+  --purple:      #6d28d9;
+  --green:       #0d7a4f;
+  --green-bg:    #d1fae5;
+  --green-text:  #065f46;
+  --red-bg:      #fde8e8;
+  --red-text:    #9b1c1c;
+  --warn-bg:     #fffbeb;
+  --warn-border: #fcd34d;
+  --warn-text:   #78350f;
+  --radius:      10px;
+  --radius-sm:   6px;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --mono: 'Cascadia Code', 'Fira Mono', Consolas, 'Courier New', monospace;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  line-height: 1.5;
+}
+
+.wrap { max-width: 1000px; margin: 0 auto; }
+
+/* ── INTRO ── */
+.intro { margin-bottom: 2.2rem; }
+
+.intro-headline {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+.intro-headline em { font-style: italic; color: var(--blue); }
+
+.intro-sub {
+  font-size: 0.97rem;
+  color: var(--text2);
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+  max-width: 760px;
+}
+.intro-sub strong { color: var(--text); font-weight: 600; }
+.intro-sub code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: #e8e7e2;
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+.example-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 1.2rem;
+  font-size: 0.93rem;
+  color: var(--text2);
+  max-width: 760px;
+}
+.example-box strong { color: var(--text); }
+
+.callout {
+  display: flex;
+  gap: 12px;
+  background: var(--warn-bg);
+  border: 1px solid var(--warn-border);
+  border-radius: var(--radius);
+  padding: 14px 18px;
+  margin-bottom: 1.6rem;
+  max-width: 760px;
+}
+.callout-icon { font-size: 20px; flex-shrink: 0; line-height: 1.5; }
+.callout-text { font-size: 14px; color: var(--warn-text); line-height: 1.65; }
+.callout-text strong { color: #451a03; font-weight: 700; }
+
+/* Divider */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+.divider-line  { flex: 1; height: 1px; background: var(--border); }
+.divider-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--text3);
+  white-space: nowrap;
+}
+
+/* ── CARDS ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 1.4rem;
+}
+.card-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text3);
+  margin-bottom: 12px;
+}
+.card-note {
+  font-size: 12px;
+  color: var(--text3);
+  margin-top: 10px;
+  line-height: 1.55;
+}
+
+/* ── reference tables ── */
+.ref-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 700px) { .ref-grid { grid-template-columns: 1fr; } }
+
+table.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+}
+table.data-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--text3);
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border2);
+}
+table.data-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+table.data-table td.num, table.data-table th.num { text-align: right; font-family: var(--mono); }
+table.data-table tr:last-child td { border-bottom: none; }
+table.data-table tr.total-row td { font-weight: 700; border-top: 1px solid var(--border2); border-bottom: none; }
+
+/* ── school identity ── */
+.school-id {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+.school-id .item .label { font-size: 11px; color: var(--text3); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 2px; }
+.school-id .item .val { font-size: 15px; font-weight: 600; color: var(--text); }
+
+/* ── PARAMETER CONTROLS ── */
+.field label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text2);
+  margin-bottom: 5px;
+}
+.field .hint { font-weight: 400; color: var(--text3); font-size: 11px; }
+.field input {
+  width: 100%;
+  font-family: var(--mono);
+  font-size: 15px;
+  padding: 7px 10px;
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  background: var(--surface2);
+  color: var(--text);
+}
+.field input:focus { outline: 2px solid var(--blue); outline-offset: -1px; background: var(--surface); }
+input.mini-input {
+  width: 78px;
+  font-family: var(--mono);
+  font-size: 13.5px;
+  padding: 5px 7px;
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  background: var(--surface2);
+  color: var(--text);
+  text-align: right;
+}
+input.mini-input:focus { outline: 2px solid var(--blue); outline-offset: -1px; background: var(--surface); }
+
+.btn {
+  padding: 8px 18px;
+  border-radius: 99px;
+  border: 1px solid var(--border2);
+  background: var(--surface);
+  color: var(--text2);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: background .12s, color .12s, border-color .12s, opacity .12s;
+}
+.btn:hover { border-color: var(--text2); color: var(--text); }
+.btn.primary { background: var(--blue); color: #fff; border-color: var(--blue); }
+.btn.primary:hover { background: var(--blue-text); border-color: var(--blue-text); }
+.btn:disabled { opacity: .4; cursor: default; }
+.btn:disabled:hover { border-color: var(--border2); color: var(--text2); }
+
+/* ── results ── */
+.result-box .result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13.5px;
+}
+.result-row:last-child { border-bottom: none; }
+.result-row .k { color: var(--text2); }
+.result-row .v { font-family: var(--mono); font-weight: 700; color: var(--text); }
+.result-row.hl .v { color: var(--blue-text); font-size: 1.15em; }
+.badge {
+  display: inline-block;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 99px;
+}
+.badge.ok { background: var(--green-bg); color: var(--green-text); }
+.badge.no { background: var(--red-bg); color: var(--red-text); }
+.badge.porte { background: var(--blue-bg); color: var(--blue-text); }
+
+/* ── matricula grid ── */
+.sim-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 760px) { .sim-grid { grid-template-columns: 1fr; } }
+
+/* ── fator ajuste ── */
+.fator-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+.fator-controls .field { max-width: 220px; }
+
+/* ── scenario stepper ── */
+.scenario-box {
+  background: #1e1e2e;
+  border: 1px solid #313145;
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  margin-bottom: 12px;
+  overflow-x: auto;
+}
+table.scenario-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--mono);
+  font-size: 12.5px;
+  min-width: 420px;
+}
+table.scenario-table th {
+  text-align: right;
+  color: #7f849c;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-bottom: 1px solid #45455f;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: 10.5px;
+}
+table.scenario-table th:first-child, table.scenario-table td:first-child { text-align: left; }
+table.scenario-table td {
+  text-align: right;
+  padding: 6px 10px;
+  color: #cdd6f4;
+  border-bottom: 1px solid #2a2a3d;
+  transition: background .3s, color .3s;
+}
+table.scenario-table tr.current td {
+  background: #f59e0b;
+  color: #1e1e2e;
+  font-weight: 700;
+}
+table.scenario-table tr.base td { color: #89b4fa; font-weight: 700; }
+table.scenario-table tr.placeholder td { color: #45455f; }
+
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.status { font-size: 13.5px; color: var(--text2); min-height: 20px; line-height: 1.5; }
+.status strong { color: var(--text); }
+.status .done-badge {
+  display: inline-block;
+  background: var(--green-bg);
+  color: var(--green-text);
+  font-weight: 700;
+  font-size: 11px;
+  padding: 2px 9px;
+  border-radius: 99px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.step-detail {
+  font-family: var(--mono);
+  font-size: 12.5px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  margin-bottom: 12px;
+  line-height: 1.9;
+  min-height: 90px;
+}
+.step-detail .lbl { color: var(--text3); }
+.step-detail .hl  { color: var(--blue-text); font-weight: 700; }
+
+.footnote {
+  margin-top: 2rem;
+  font-size: 12px;
+  color: var(--text3);
+  line-height: 1.6;
+}
+.footnote h3 {
+  font-size: 12px;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 8px;
+  margin-top: 18px;
+}
+.footnote table { width: 100%; border-collapse: collapse; margin-top: 6px; margin-bottom: 4px; }
+.footnote table td { padding: 4px 8px 4px 0; border-bottom: 1px solid var(--border); font-size: 12px; vertical-align: top; }
+.footnote table td.cell-ref { font-family: var(--mono); color: var(--blue-text); font-weight: 700; white-space: nowrap; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="intro">
+  <div class="intro-headline">Simulador de Repasse do <em>PNAE</em></div>
+  <div class="intro-sub">
+    Projeto 1 do curso <strong>Análise de Dados para Pesquisas em Políticas Públicas</strong> (FGV EAESP).
+    Este artefato reproduz, de forma interativa, o modelo construído em Excel para estimar o
+    <strong>repasse anual do Programa Nacional de Alimentação Escolar (PNAE)</strong> para uma escola municipal,
+    a partir do número de matrículas por modalidade de ensino.
+  </div>
+  <div class="example-box">
+    <strong>Escola simulada:</strong> <span id="hdr-nome"></span>, bairro <span id="hdr-bairro"></span>,
+    <span id="hdr-municipio"></span>. Os valores per capita, os dias letivos e a fórmula de cálculo do repasse
+    são reais (Resolução CD/FNDE nº 1/2026); a escola e as matrículas são fictícias, criadas para fins didáticos.
+  </div>
+</div>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <span class="divider-label">Parâmetros oficiais do PNAE — 2026</span>
+  <div class="divider-line"></div>
+</div>
+
+<div class="card">
+  <div class="card-title">Aba Parametros_PNAE</div>
+  <div class="ref-grid">
+    <div>
+      <table class="data-table">
+        <thead><tr><th>Modalidade</th><th class="num">Valor per capita (R$/dia)</th></tr></thead>
+        <tbody id="tbl-parametros"></tbody>
+      </table>
+    </div>
+    <div>
+      <table class="data-table" style="margin-bottom:14px;">
+        <thead><tr><th>Matrículas (mínimo)</th><th>Porte</th></tr></thead>
+        <tbody>
+          <tr><td class="num">0</td><td>Pequena</td></tr>
+          <tr><td class="num">201</td><td>Média</td></tr>
+          <tr><td class="num">401</td><td>Grande</td></tr>
+        </tbody>
+      </table>
+      <div class="school-id" style="gap:18px;">
+        <div class="item"><div class="label">Dias letivos (ano)</div><div class="val">200</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="card-note">
+    Faixas de porte criadas para fins didáticos deste curso. Fonte dos valores per capita: Resolução CD/FNDE nº 1,
+    de 18 de fevereiro de 2026 (altera a Resolução CD/FNDE nº 6/2020) — reajuste médio de 14,35% em relação a 2025.
+  </div>
+</div>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <span class="divider-label">Dados da escola e matrículas</span>
+  <div class="divider-line"></div>
+</div>
+
+<div class="card">
+  <div class="card-title">Aba Simulador_Escola</div>
+  <div class="school-id">
+    <div class="item"><div class="label">Nome da escola (fictício)</div><div class="val" id="id-nome"></div></div>
+    <div class="item"><div class="label">Bairro</div><div class="val" id="id-bairro"></div></div>
+    <div class="item"><div class="label">Município</div><div class="val" id="id-municipio"></div></div>
+  </div>
+</div>
+
+<div class="sim-grid">
+  <div class="card">
+    <div class="card-title">Matrículas por modalidade (editável)</div>
+    <table class="data-table">
+      <thead>
+        <tr><th>Modalidade</th><th class="num">Matrículas</th><th class="num">Per capita (R$/dia)</th></tr>
+      </thead>
+      <tbody id="tbl-matriculas"></tbody>
+      <tbody>
+        <tr class="total-row"><td>Total de Matrículas</td><td class="num" id="out-total-matriculas">—</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Resultado do cálculo</div>
+    <div class="result-box">
+      <div class="result-row"><span class="k">Total de matrículas</span><span class="v" id="res-total">—</span></div>
+      <div class="result-row"><span class="k">Porte da escola</span><span class="v" id="res-porte">—</span></div>
+      <div class="result-row"><span class="k">Dias letivos</span><span class="v">200</span></div>
+      <div class="result-row hl"><span class="k">Repasse anual estimado</span><span class="v" id="res-repasse">—</span></div>
+      <div class="result-row"><span class="k">Elegibilidade p/ complementação municipal</span><span class="v" id="res-elegivel">—</span></div>
+    </div>
+    <div class="card-note">
+      Regra de elegibilidade criada apenas para praticar SE aninhado com E/OU; não reproduz nenhum critério oficial
+      de complementação municipal.
+    </div>
+  </div>
+</div>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <span class="divider-label">Simulação com fator de ajuste</span>
+  <div class="divider-line"></div>
+</div>
+
+<div class="card">
+  <div class="card-title">Modelo para Simulação — Fator de Ajuste</div>
+  <div class="fator-controls">
+    <div class="field">
+      <label for="in-fator">Fator de Ajuste <span class="hint">ex.: 0,10 = +10%, -0,10 = -10%</span></label>
+      <input type="number" id="in-fator" value="0" step="0.05" min="-0.9">
+    </div>
+  </div>
+  <table class="data-table">
+    <thead>
+      <tr><th>Modalidade</th><th class="num">Matrículas</th><th class="num">Matrículas ajustadas</th><th class="num">Per capita (R$/dia)</th></tr>
+    </thead>
+    <tbody id="tbl-fator"></tbody>
+    <tbody>
+      <tr class="total-row"><td>Total de Matrículas e Repasse</td><td></td><td class="num" id="out-fator-total">—</td><td></td></tr>
+    </tbody>
+  </table>
+  <div class="result-box" style="margin-top:10px;">
+    <div class="result-row hl"><span class="k">Repasse anual ajustado (Fator × dias letivos)</span><span class="v" id="res-repasse-fator">—</span></div>
+  </div>
+  <div class="card-note">
+    Reproduz o bloco "Modelo para Simulação" da planilha (linhas 26–35): matrículas ajustadas =
+    matrículas base × (1 + fator); repasse = SOMARPRODUTO(matrículas ajustadas, per capita) × dias letivos.
+    Este bloco usa a base fixa de matrículas da planilha (Creche 60, Pré-escola 80, Fundamental 50), independente
+    da tabela editável acima — exatamente como na planilha original.
+  </div>
+</div>
+
+<div class="divider">
+  <div class="divider-line"></div>
+  <span class="divider-label">Tabela de Dados — cenários passo a passo</span>
+  <div class="divider-line"></div>
+</div>
+
+<div class="card">
+  <div class="card-title">Reconstruindo a Tabela de Dados (A39:C48)</div>
+  <div class="example-box" style="margin-bottom:14px;">
+    Na planilha, esta tabela foi gerada com <strong>Dados → Teste de Hipótese → Tabela de Dados</strong>, variando
+    o Fator de Variação (coluna, célula de entrada <code>C26</code>) de -20% a +20% em passos de 5%, sem preencher
+    a linha. Clique em avançar para reconstruir, cenário a cenário, os mesmos 9 resultados da sua planilha.
+  </div>
+  <div class="scenario-box">
+    <table class="scenario-table">
+      <thead>
+        <tr><th>Fator de Variação</th><th>Total de Matrículas</th><th>Repasse Anual (R$)</th></tr>
+      </thead>
+      <tbody id="scenario-tbody"></tbody>
+    </table>
+  </div>
+  <div class="controls">
+    <button class="btn" onclick="resetScenarios()">&#x21BA; Reiniciar</button>
+    <button class="btn primary" id="btn-scenario-step" onclick="stepScenario()">Avançar cenário &rarr;</button>
+  </div>
+  <div class="status" id="scenario-status">Clique em "Avançar cenário" para começar, do fator -20% até +20%.</div>
+  <div class="step-detail" id="scenario-detail">Nenhum cenário processado ainda.</div>
+</div>
+
+<div class="footnote">
+  <h3>Rastreabilidade — células da planilha que inspiraram cada parte deste artefato</h3>
+  <table>
+    <tr><td class="cell-ref">Parametros_PNAE!A5:B11</td><td>Tabela de referência de modalidades e valores per capita.</td></tr>
+    <tr><td class="cell-ref">Parametros_PNAE!B13</td><td>Dias letivos do ano (200), usado em todos os cálculos de repasse.</td></tr>
+    <tr><td class="cell-ref">Parametros_PNAE!A16:B19</td><td>Faixas de porte da escola (Pequena / Média / Grande).</td></tr>
+    <tr><td class="cell-ref">Simulador_Escola!B4:B6</td><td>Identidade da escola: nome, bairro e município.</td></tr>
+    <tr><td class="cell-ref">Simulador_Escola!A9:C16</td><td>Tabela de matrículas por modalidade e VLOOKUP do valor per capita.</td></tr>
+    <tr><td class="cell-ref">Simulador_Escola!B17</td><td>Total de matrículas (SOMA).</td></tr>
+    <tr><td class="cell-ref">Simulador_Escola!B19</td><td>Porte da escola (VLOOKUP aproximado nas faixas de Parametros_PNAE).</td></tr>
+    <tr><td class="cell-ref">Simulador_Escola!B21</td><td>Repasse Anual Estimado (SOMARPRODUTO de matrículas × per capita, × dias letivos).</td></tr>
+    <tr><td class="cell-ref">Simulador_Escola!C23</td><td>Elegibilidade para complementação municipal (SE aninhado com E/OU).</td></tr>
+    <tr><td class="cell-ref">Simulador_Escola!C26, A28:D35</td><td>Fator de Ajuste e o bloco "Modelo para Simulação" (matrículas ajustadas e repasse ajustado).</td></tr>
+    <tr><td class="cell-ref">Simulador_Escola!A39:C48</td><td>Tabela de Dados (Dados → Teste de Hipótese) reconstruída passo a passo no stepper de cenários.</td></tr>
+  </table>
+  Artefato gerado com apoio de IA (Claude, Anthropic) a partir da planilha "Projeto_1_-_final.xlsx" e deste prompt,
+  para fins de documentação de uso de IA no portfólio do curso.
+</div>
+
+</div>
+
+<script>
+/* ===== dados extraídos fielmente da planilha ===== */
+var PARAMETROS = [
+  { mod: 'Creche',               pc: 1.57 },
+  { mod: 'Pré-escola',           pc: 0.82 },
+  { mod: 'Fundamental',          pc: 0.57 },
+  { mod: 'Médio',                pc: 0.57 },
+  { mod: 'EJA',                  pc: 0.57 },
+  { mod: 'Indígena/Quilombola',  pc: 0.98 },
+  { mod: 'AEE (contraturno)',    pc: 0.78 }
+];
+var DIAS_LETIVOS = 200;
+var FAIXAS = [ {min:0,porte:'Pequena'}, {min:201,porte:'Média'}, {min:401,porte:'Grande'} ];
+
+var ESCOLA = { nome: 'EMEB Vila Quitaúna', bairro: 'Quitaúna', municipio: 'Osasco/SP' };
+
+/* matrículas por modalidade — valores reais da aba Simulador_Escola, editáveis no topo */
+var MATRICULAS_BASE = [
+  { mod: 'Creche',              qtd: 60 },
+  { mod: 'Pré-escola',          qtd: 80 },
+  { mod: 'Fundamental',         qtd: 50 },
+  { mod: 'Médio',                qtd: 0  },
+  { mod: 'EJA',                  qtd: 0  },
+  { mod: 'Indígena/Quilombola',  qtd: 0  },
+  { mod: 'AEE (contraturno)',    qtd: 0  }
+];
+
+function fmtBRL(v) {
+  return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+function fmtNum(v) {
+  return v.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+}
+function percapitaFor(mod) {
+  for (var i = 0; i < PARAMETROS.length; i++) if (PARAMETROS[i].mod === mod) return PARAMETROS[i].pc;
+  return 0;
+}
+function porteFor(total) {
+  var p = FAIXAS[0].porte;
+  for (var i = 0; i < FAIXAS.length; i++) if (total >= FAIXAS[i].min) p = FAIXAS[i].porte;
+  return p;
+}
+
+/* ===== cabeçalho e identidade da escola ===== */
+document.getElementById('hdr-nome').textContent = ESCOLA.nome;
+document.getElementById('hdr-bairro').textContent = ESCOLA.bairro;
+document.getElementById('hdr-municipio').textContent = ESCOLA.municipio;
+document.getElementById('id-nome').textContent = ESCOLA.nome;
+document.getElementById('id-bairro').textContent = ESCOLA.bairro;
+document.getElementById('id-municipio').textContent = ESCOLA.municipio;
+
+/* ===== tabela de referência Parametros_PNAE ===== */
+(function renderParametros() {
+  var tbody = document.getElementById('tbl-parametros');
+  PARAMETROS.forEach(function(p) {
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + p.mod + '</td><td class="num">' + p.pc.toFixed(2).replace('.', ',') + '</td>';
+    tbody.appendChild(tr);
+  });
+})();
+
+/* ===== tabela editável de matrículas + resultados ===== */
+function renderMatriculas() {
+  var tbody = document.getElementById('tbl-matriculas');
+  tbody.innerHTML = '';
+  MATRICULAS_BASE.forEach(function(row, idx) {
+    var pc = percapitaFor(row.mod);
+    var tr = document.createElement('tr');
+    var tdMod = document.createElement('td');
+    tdMod.textContent = row.mod;
+    var tdQtd = document.createElement('td');
+    tdQtd.className = 'num';
+    var input = document.createElement('input');
+    input.type = 'number';
+    input.className = 'mini-input';
+    input.min = '0';
+    input.step = '1';
+    input.value = row.qtd;
+    input.addEventListener('input', function() {
+      var v = parseInt(input.value, 10);
+      MATRICULAS_BASE[idx].qtd = isNaN(v) || v < 0 ? 0 : v;
+      recalcResultados();
+    });
+    tdQtd.appendChild(input);
+    var tdPc = document.createElement('td');
+    tdPc.className = 'num';
+    tdPc.textContent = pc.toFixed(2).replace('.', ',');
+    tr.appendChild(tdMod); tr.appendChild(tdQtd); tr.appendChild(tdPc);
+    tbody.appendChild(tr);
+  });
+}
+
+function recalcResultados() {
+  var total = 0, repasse = 0;
+  MATRICULAS_BASE.forEach(function(row) {
+    total += row.qtd;
+    repasse += row.qtd * percapitaFor(row.mod);
+  });
+  repasse = repasse * DIAS_LETIVOS;
+  var porte = porteFor(total);
+
+  document.getElementById('out-total-matriculas').textContent = total;
+  document.getElementById('res-total').textContent = total;
+  document.getElementById('res-porte').innerHTML = '<span class="badge porte">' + porte + '</span>';
+  document.getElementById('res-repasse').textContent = fmtBRL(repasse);
+
+  var creche = MATRICULAS_BASE.find(function(r){ return r.mod === 'Creche'; }).qtd;
+  var pre = MATRICULAS_BASE.find(function(r){ return r.mod === 'Pré-escola'; }).qtd;
+  var elegivel = (porte === 'Pequena' && (creche > 0 || pre > 0));
+  document.getElementById('res-elegivel').innerHTML = elegivel
+    ? '<span class="badge ok">Elegível</span>'
+    : '<span class="badge no">Não Elegível</span>';
+}
+
+renderMatriculas();
+recalcResultados();
+
+/* ===== fator de ajuste — bloco "Modelo para Simulação" (base fixa e independente) ===== */
+var FATOR_BASE = [
+  { mod: 'Creche',               qtd: 60 },
+  { mod: 'Pré-escola',           qtd: 80 },
+  { mod: 'Fundamental',          qtd: 50 },
+  { mod: 'Médio',                qtd: 0  },
+  { mod: 'EJA',                  qtd: 0  },
+  { mod: 'Indígena/Quilombola',  qtd: 0  },
+  { mod: 'AEE (contraturno)',    qtd: 0  }
+];
+
+function renderFator() {
+  var fator = parseFloat(document.getElementById('in-fator').value);
+  if (isNaN(fator)) fator = 0;
+  var tbody = document.getElementById('tbl-fator');
+  tbody.innerHTML = '';
+  var totalAjustado = 0, repasseAjustado = 0;
+  FATOR_BASE.forEach(function(row) {
+    var pc = percapitaFor(row.mod);
+    var ajustada = row.qtd * (1 + fator);
+    totalAjustado += ajustada;
+    repasseAjustado += ajustada * pc;
+    var tr = document.createElement('tr');
+    tr.innerHTML = '<td>' + row.mod + '</td><td class="num">' + row.qtd + '</td><td class="num">' +
+      fmtNum(ajustada) + '</td><td class="num">' + pc.toFixed(2).replace('.', ',') + '</td>';
+    tbody.appendChild(tr);
+  });
+  repasseAjustado = repasseAjustado * DIAS_LETIVOS;
+  document.getElementById('out-fator-total').textContent = fmtNum(totalAjustado);
+  document.getElementById('res-repasse-fator').textContent = fmtBRL(repasseAjustado);
+}
+
+document.getElementById('in-fator').addEventListener('input', renderFator);
+renderFator();
+
+/* ===== stepper — Tabela de Dados (A39:C48) ===== */
+var SCENARIO_FATORES = [-0.20, -0.15, -0.10, -0.05, 0, 0.05, 0.10, 0.15, 0.20];
+var scenarioIdx = 0;
+
+function baseTotals() {
+  var totalMat = 0, repasseBase = 0;
+  FATOR_BASE.forEach(function(row) {
+    totalMat += row.qtd;
+    repasseBase += row.qtd * percapitaFor(row.mod);
+  });
+  return { totalMat: totalMat, repasseBase: repasseBase * DIAS_LETIVOS };
+}
+
+function renderScenarioTable() {
+  var tbody = document.getElementById('scenario-tbody');
+  tbody.innerHTML = '';
+  var b = baseTotals();
+  SCENARIO_FATORES.forEach(function(f, i) {
+    var tr = document.createElement('tr');
+    var pctLabel = (f * 100).toFixed(0) + '%';
+    if (i < scenarioIdx) {
+      var totalAdj = b.totalMat * (1 + f);
+      var repasseAdj = b.repasseBase * (1 + f);
+      tr.className = (f === 0) ? 'base' : '';
+      tr.innerHTML = '<td>' + pctLabel + '</td><td>' + fmtNum(totalAdj) + '</td><td>' + fmtBRL(repasseAdj) + '</td>';
+    } else if (i === scenarioIdx - 1) {
+      var totalAdj2 = b.totalMat * (1 + f);
+      var repasseAdj2 = b.repasseBase * (1 + f);
+      tr.className = 'current';
+      tr.innerHTML = '<td>' + pctLabel + '</td><td>' + fmtNum(totalAdj2) + '</td><td>' + fmtBRL(repasseAdj2) + '</td>';
+    } else {
+      tr.className = 'placeholder';
+      tr.innerHTML = '<td>' + pctLabel + '</td><td>—</td><td>—</td>';
+    }
+    tbody.appendChild(tr);
+  });
+}
+
+function resetScenarios() {
+  scenarioIdx = 0;
+  renderScenarioTable();
+  document.getElementById('scenario-status').innerHTML =
+    'Clique em <strong>"Avançar cenário"</strong> para começar, do fator -20% até +20%.';
+  document.getElementById('scenario-detail').textContent = 'Nenhum cenário processado ainda.';
+  document.getElementById('btn-scenario-step').disabled = false;
+}
+
+function stepScenario() {
+  if (scenarioIdx >= SCENARIO_FATORES.length) return;
+  var f = SCENARIO_FATORES[scenarioIdx];
+  var b = baseTotals();
+  var totalAdj = b.totalMat * (1 + f);
+  var repasseAdj = b.repasseBase * (1 + f);
+  scenarioIdx++;
+  renderScenarioTable();
+
+  document.getElementById('scenario-detail').innerHTML =
+    '<span class="lbl">Fator de variação:</span> <span class="hl">' + (f * 100).toFixed(0) + '%</span><br>' +
+    '<span class="lbl">Total de matrículas ajustadas:</span> ' + fmtNum(b.totalMat) + ' × (1 ' + (f>=0?'+':'-') + ' ' + Math.abs(f).toFixed(2).replace('.', ',') + ') = <span class="hl">' + fmtNum(totalAdj) + '</span><br>' +
+    '<span class="lbl">Repasse ajustado:</span> ' + fmtBRL(b.repasseBase) + ' × (1 ' + (f>=0?'+':'-') + ' ' + Math.abs(f).toFixed(2).replace('.', ',') + ') = <span class="hl">' + fmtBRL(repasseAdj) + '</span>';
+
+  document.getElementById('scenario-status').innerHTML =
+    'Cenário fator = <strong>' + (f*100).toFixed(0) + '%</strong> calculado. Repasse: <strong>' + fmtBRL(repasseAdj) + '</strong>.';
+
+  if (scenarioIdx >= SCENARIO_FATORES.length) {
+    document.getElementById('btn-scenario-step').disabled = true;
+    document.getElementById('scenario-status').innerHTML =
+      '<span class="done-badge">&#10003; Concluído</span> Todos os 9 cenários da Tabela de Dados foram reconstruídos.';
+  }
+}
+
+resetScenarios();
+</script>
+</body>
+</html>
