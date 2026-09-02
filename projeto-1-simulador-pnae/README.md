@@ -49,7 +49,7 @@ Ao final, liste rapidamente quais células da minha planilha inspiraram cada par
 - **Estrutura:** *[listar colunas/variáveis usadas]*
 
 ## Participação do Grupo
-- **O que aprendemos com este projeto:** *[descrever]*
+- **O que aprendemos com este projeto:** Aprendemos na prática como uma política pública nacional, nesse caso o PNAE, se traduz em cálculos concretos no nível de escola e como pequenas variações impactam diretamente o valor do repasse recebido. No Excel, usamos as fórmulas PROCV, SE e SOMARPRODUTO para automatizar esse cálculo a partir de uma tabela de dados e, com isso, transformamos em uma página de site para facilitar a vizualição dos impactos quando mudamos um número. O projeto foi uma boa experiência para aprender a organizar dados oficiais e a disponibilizar esses documentos de forma pública para outras pessoas terem acesso (github).
 - **Papel de cada integrante:**
   - *[Nome 1]: [o que fez]*
   - *[Nome 2]: [o que fez]*
