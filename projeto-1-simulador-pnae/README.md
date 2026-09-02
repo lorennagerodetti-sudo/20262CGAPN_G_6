@@ -20,7 +20,7 @@ Este projeto simula o cálculo do repasse financeiro do PNAE (Programa Nacional 
 ## Uso de Inteligência Artificial
 - **Ferramenta utilizada:** Claude (Anthropic)
 - **Para que foi usada:** gerar o artefato HTML interativo do simulador, reproduzindo fielmente a lógica e os valores da planilha `Projeto_1_-_final.xlsx`
-- **Exemplo de prompt utilizado: Você vai gerar um artefato HTML interativo (um único arquivo, autocontido) que simula o cálculo do repasse do PNAE, a partir do modelo que eu construi em Excel para o Projeto 1 do curso Análise de Dados para Pesquisas em Políticas Públicas (FGV EAESP).
+- **Exemplo de prompt utilizado:** Você vai gerar um artefato HTML interativo (um único arquivo, autocontido) que simula o cálculo do repasse do PNAE, a partir do modelo que eu construi em Excel para o Projeto 1 do curso Análise de Dados para Pesquisas em Políticas Públicas (FGV EAESP).
 
 Anexei dois arquivos:
 
