@@ -40,7 +40,7 @@ Siga o mesmo estilo visual do modelo.html anexado: paleta de cores, tipografia, 
 O artefato deve ser um único arquivo HTML, sem dependências externas (sem CDN, sem chamadas à internet, sem fontes externas), porque será usado sem acesso à web.
 Reproduza as fórmulas da minha planilha com a mesma lógica (soma, PROCV, SOMARPRODUTO, SE aninhado com E/OU, e o fator de ajuste usado na Tabela de Dados) — não simplifique nem troque por uma lógica diferente da que eu construí.
 Ao final, liste rapidamente quais células da minha planilha inspiraram cada parte do artefato (preciso disso para documentar o uso de IA no portfólio do GitHub, junto com este prompt).
-- **O que foi ajustado manualmente:** *[descrever os ajustes feitos depois da resposta da IA]*
+- **O que foi ajustado manualmente:** Nada foi ajustado manualmente após o envio do prompt para a IA.
 
 ## Fonte de Dados
 - **Fonte oficial:** *[confirmar a resolução/fonte usada]*
