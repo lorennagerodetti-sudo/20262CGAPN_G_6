@@ -1,14 +1,15 @@
  # Projeto 2 - Painel Censo
 
 ## Objetivo
-Este projeto organiza e cruza dados do Censo Escolar de 2024, a fim de exibir informações em um única tela (dashboard), facilitando a visualização de dados.
+Este projeto organiza e cruza dados do Censo Escolar de 2024. Isso realizado por meio de tabelas dinâmicas, gráficos dinâmicos e segmentação. A fim de exibir informações em um única tela (dashboard), facilitando a visualização dos dados.
 
 ## Como usar
-1. Abra a planilha `Projeto_1_-_final.xlsx` para ver o simulador completo, com as fórmulas (SE, PROCV, SOMARPRODUTO e a Tabela de Dados).
-2. Abra o arquivo `simulador_pnae.html` no navegador para interagir com a versão visual do simulador:
-   - Edite as quantidades de matrículas por modalidade na tabela principal e veja o repasse recalculado automaticamente.
-   - Use o campo de "Fator de Ajuste" para simular variações nas matrículas.
-   - Clique em "Avançar cenário" para percorrer os 9 cenários da Tabela de Dados (de -20% a +20%).
+1. Abra a planilha `` para ver o simulador completo, com as ferramentas interativas (segmentação, tabelas dinâmicas e graficos dinâmicos).
+2. Abra o arquivo `` no navegador para interagir com a versão visual do simulador:
+   - Observe os dados presentes no dashboard.
+   - Há 4 tabelas de segmentação de dados: "SITUAÇÃO", "DEPENDENCIA", "LOCALIZAÇÃO", "TAM_ESCOLA" com diferentes categorias cada.
+   - Clique em no máximo 1 categoria de cada tabela, sendo possível combinar categorias de tabelas diferentes. 
+   - Analise as segmentações de dados por meio dos gráficos dinãmicos.  
 
 ## Prints do resultado
 <img width="539" height="493" alt="image" src="https://github.com/user-attachments/assets/f3ce4c91-1186-4557-a3a5-fa3a9de78e35" />
