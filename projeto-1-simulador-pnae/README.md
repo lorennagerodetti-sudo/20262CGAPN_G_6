@@ -33,7 +33,7 @@ Este projeto simula o cálculo do repasse financeiro do PNAE (Programa Nacional 
 ## Prints do resultado
 <img width="539" height="493" alt="image" src="https://github.com/user-attachments/assets/f3ce4c91-1186-4557-a3a5-fa3a9de78e35" />
 <img width="1060" height="1090" alt="WhatsApp Image 2026-09-02 at 13 41 00" src="https://github.com/user-attachments/assets/356cc381-d02d-4727-a9f8-95bea443900c" />
-<img width="1060" height="1090" alt="WhatsApp Image 2026-09-02 at 13 41 00" src="https://github.com/user-attachments/assets/39cd775a-0032-48d0-9cb7-8dec4aa3bb8c" /> 
+
 
 
 
