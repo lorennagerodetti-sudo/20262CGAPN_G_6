@@ -1,5 +1,11 @@
  # Projeto 2 - Painel Censo
 
+ Isso aq tem q sair, são apenas as instruções==>>>>>>Projeto 2 — Painel do Censo Escolar
+• Planilha Excel com a base tratada (colunas calculadas com SE e PROCV).
+• Tabelas dinâmicas, gráfico dinâmico e segmentação.
+• Dash montado a partir da tabela e do gráfico dinâmico.
+• README com objetivo, como usar, e os três disclaimers.
+
 ## Objetivo
 Este projeto organiza e cruza dados do Censo Escolar de 2024. Isso realizado por meio de tabelas dinâmicas, gráficos dinâmicos e segmentação. A fim de exibir informações em um única tela (dashboard), facilitando a visualização dos dados.
 
