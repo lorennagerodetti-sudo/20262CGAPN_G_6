@@ -10,24 +10,15 @@
 Este projeto organiza e cruza dados do Censo Escolar de 2024. Isso realizado por meio de tabelas dinâmicas, gráficos dinâmicos e segmentação. A fim de exibir informações em um única tela (dashboard), facilitando a visualização dos dados.
 
 ## Como usar
-1. Abra a planilha `` para ver o simulador completo, com as ferramentas interativas (segmentação, tabelas dinâmicas e graficos dinâmicos).
-2. Abra o arquivo `` no navegador para interagir com a versão visual do simulador:
+1. Abra a planilha `https://1drv.ms/x/c/415EFA88676D0898/IQDhz9MicZJ7TqYaaaJgLYoBATXQdQxHqOjU3fhko53xL54?e=iudEnm` para ver o simulador completo, com as ferramentas interativas (segmentação, tabelas dinâmicas e graficos dinâmicos).
+2. Abra o arquivo `Painel_de_Indicadores no navegador para interagir com a versão visual do simulador:
    - Observe os dados presentes no dashboard.
    - Há 4 tabelas de segmentação de dados: "SITUAÇÃO", "DEPENDENCIA", "LOCALIZAÇÃO", "TAM_ESCOLA" com diferentes categorias cada.
    - Clique em no máximo 1 categoria de cada tabela, sendo possível combinar categorias de tabelas diferentes. 
    - Analise as segmentações de dados por meio dos gráficos dinãmicos.  
 
 ## Prints do resultado
-<img width="539" height="493" alt="image" src="https://github.com/user-attachments/assets/f3ce4c91-1186-4557-a3a5-fa3a9de78e35" />
-<img width="1060" height="1090" alt="WhatsApp Image 2026-09-02 at 13 41 00" src="https://github.com/user-attachments/assets/356cc381-d02d-4727-a9f8-95bea443900c" />
 
-
-
-
-## Uso de Inteligência Artificial
-- **Ferramenta utilizada:** Claude (Anthropic)
-- **Para que foi usada:** gerar o artefato HTML interativo do simulador, reproduzindo fielmente a lógica e os valores da planilha `Projeto_1_-_final.xlsx`
-- **Exemplo de prompt utilizado:** Você vai gerar um artefato HTML interativo (um único arquivo, autocontido) que simula o cálculo do repasse do PNAE, a partir do modelo que eu construi em Excel para o Projeto 1 do curso Análise de Dados para Pesquisas em Políticas Públicas (FGV EAESP).
 
 Anexei dois arquivos:
 
