@@ -43,7 +43,7 @@ Ao final, liste rapidamente quais células da minha planilha inspiraram cada par
 - **O que foi ajustado manualmente:** Nada foi ajustado manualmente após o envio do prompt para a IA.
 
 ## Fonte de Dados
-- **Fonte oficial:** *Base de dados dos repasses do Programa Nacional de Alimentação Escolar (PNAE)*
+- **Fonte oficial:** Base de dados dos repasses do Programa Nacional de Alimentação Escolar (PNAE)
 - **Link oficial:** *[colar o link da fonte]*
 - **O que os dados representam:** *[descrever]*
 - **Estrutura:** *[listar colunas/variáveis usadas]*
