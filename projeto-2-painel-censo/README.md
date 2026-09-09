@@ -46,7 +46,7 @@ Ao final, liste rapidamente quais células da minha planilha inspiraram cada par
 - **Fonte oficial:** *Instituto Nacional de Estudos e Pesquisas Educacionais Anísio teixeira*
 - **Link oficial:** *download.inep.gov.br/dados_abertos/microdados_censo_escolar_2025*
 - **O que os dados representam:** *Os tipos de escola presentes no município de São Paulo*
-- **Estrutura:** Ferramentas:abelas dinâmicas, gráficos dinâmicos e segmentação**
+- **Estrutura:** As principais colunas/variáveis usadas no Projeto 2 foram 
 
 ## Participação do Grupo
 - **O que aprendemos com este projeto:** Aprendemos como é possível reunir dados de maneira estratégica para fins analíticos, desde a aquisição dos  dados da fonte até a montagem do dashboard. No Excel, usamos as ferramentas  (segmentação, tabelas dinâmicas e graficos dinâmicos, com isso, transformamos em uma página de site para facilitar a vizualição dos impactos quando mudamos uma categoria na tabela. O projeto foi uma boa experiência para aprender a organizar dados oficiais e a disponibilizar esses documentos de forma pública para outras pessoas terem acesso (github).
