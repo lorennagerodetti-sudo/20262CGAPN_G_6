@@ -18,10 +18,10 @@ Imagem da página ao clicar na categoria "Ativa" da tabela "SITUAÇÃO", na cate
 <img width="1142" height="653" alt="Captura de tela 2026-09-07 145651" src="https://github.com/user-attachments/assets/7aa9fb67-d75e-4c94-90ec-14ab9c4bea91" />
 
 ## Uso de Inteligência Artificial
-- **Ferramenta utilizada:** Claude (Anthropic)
-- **Para que foi usada:** Esclarecer dúvidas sobre fórmulas do Excel. 
-- **Exemplo de prompt utilizado:** 
-- **O que foi ajustado manualmente:** Nada foi ajustado manualmente após o envio do prompt para a IA.
+- **Ferramenta utilizada:** Chat GPT
+- **Para que foi usada:** Esclarecer dúvidas sobre fórmulas do Excel (SEERRO e PROCV) e ferramenta de Segmentação. 
+- **Exemplo de prompt utilizado:** "Crie uma fórmula que, ao identificar o número 1 em uma célula, retorne o título da coluna correspondente. Porém, considere que há casos em que uma escola possui duas fontes de abastecimento de água. Nesse cenário, a fórmula não deve contabilizar a escola em dois índices diferentes, mas sim criar uma categoria separada para representar múltiplas fontes."
+- **O que foi ajustado manualmente:** Após o uso da IA, conferimos se as células e intervalos na formula estão corretos e inserimos valores diferentes para verificar se a fórmula responde corretamente nas situações. 
 
 ## Fonte de Dados
 - **Fonte oficial:** *Instituto Nacional de Estudos e Pesquisas Educacionais Anísio teixeira*
