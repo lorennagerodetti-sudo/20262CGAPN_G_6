@@ -17,6 +17,7 @@ Imagem da página inicial ao abrir o arquivo na planilha "Painel de Indicadores"
 Imagem da página ao clicar na categoria "Ativa" da tabela "SITUAÇÃO", na categoria "Municipal" da tabela "DEPENDENCIA", na categoria "Urbana" da tabela "LOCALIZAÇÃO" e na categoria "Média" da tabela "TAM_ESCOLA"\:
 <img width="1142" height="653" alt="Captura de tela 2026-09-07 145651" src="https://github.com/user-attachments/assets/7aa9fb67-d75e-4c94-90ec-14ab9c4bea91" />
 
+## Uso de Inteligência Artificial
 - **Ferramenta utilizada:** Claude (Anthropic)
 - **Para que foi usada:** gerar o artefato HTML interativo do simulador, reproduzindo fielmente a lógica e os valores da planilha `Projeto_1_-_final.xlsx`
 - **Exemplo de prompt utilizado:** Você vai gerar um artefato HTML interativo (um único arquivo, autocontido) que simula o cálculo do repasse do PNAE, a partir do modelo que eu construi em Excel para o Projeto 1 do curso Análise de Dados para Pesquisas em Políticas Públicas (FGV EAESP).
