@@ -43,9 +43,10 @@ Ao final, liste rapidamente quais células da minha planilha inspiraram cada par
 - **O que foi ajustado manualmente:** Nada foi ajustado manualmente após o envio do prompt para a IA.
 
 ## Fonte de Dados
-- **Fonte oficial:** Base de dados dos repasses do Programa Nacional de Alimentação Escolar (PNAE) e base de dados do PNAE referentes ao município de Osasco (SP).
-- **Link oficial:** Os dados foram fornecidos pela professora mas podem ser encontrados no site https://www.gov.br/fnde/pt-br do Fundo Nacional de Desenvolvimento da Educação (FNDE). 
-- **O que os dados representam:** *[descrever]*
+- **Fonte oficial:** Base de dados dos repasses do Programa Nacional de Alimentação Escolar (PNAE) e base de dados do PNAE referentes aos repasses para o município de Osasco (SP).
+- **Link oficial:** Os dados foram fornecidos pela professora, mas podem ser encontrados no site https://www.gov.br/fnde/pt-br do Fundo Nacional de Desenvolvimento da Educação (FNDE). 
+- **O que os dados representam:** Os dados dos repasses do Programa Nacional de Alimentação Escolar (PNAE) representam o registro oficial dos repasses financeiros feitos pelo governo federal, para garantir a alimentação escolar dos alunos da rede pública. Os dados do PNAE referentes aos repasses para o município de Osasco (SP) 
+  
 - **Estrutura:** *[listar colunas/variáveis usadas]*
 
 ## Participação do Grupo
