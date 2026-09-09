@@ -44,7 +44,7 @@ Ao final, liste rapidamente quais células da minha planilha inspiraram cada par
 
 ## Fonte de Dados
 - **Fonte oficial:** Base de dados dos repasses do Programa Nacional de Alimentação Escolar (PNAE) e base de dados do PNAE referentes ao município de Osasco (SP).
-- **Link oficial:** *[colar o link da fonte]*
+- **Link oficial:** Os dados foram fornecidos pela professora mas podem ser encontrados no site https://www.gov.br/fnde/pt-br do Fundo Nacional de Desenvolvimento da Educação (FNDE). 
 - **O que os dados representam:** *[descrever]*
 - **Estrutura:** *[listar colunas/variáveis usadas]*
 
