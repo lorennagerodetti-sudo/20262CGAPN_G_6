@@ -45,9 +45,8 @@ Ao final, liste rapidamente quais células da minha planilha inspiraram cada par
 ## Fonte de Dados
 - **Fonte oficial:** Base de dados dos repasses do Programa Nacional de Alimentação Escolar (PNAE) e base de dados do PNAE referentes aos repasses para o município de Osasco (SP).
 - **Link oficial:** Os dados foram fornecidos pela professora, mas podem ser encontrados no site https://www.gov.br/fnde/pt-br do Fundo Nacional de Desenvolvimento da Educação (FNDE). 
-- **O que os dados representam:** Os dados dos repasses do Programa Nacional de Alimentação Escolar (PNAE) representam o registro oficial dos repasses financeiros feitos pelo governo federal, para garantir a alimentação escolar dos alunos da rede pública. Os dados do PNAE referentes aos repasses para o município de Osasco (SP) 
-  
-- **Estrutura:** *[listar colunas/variáveis usadas]*
+- **O que os dados representam:** Repasses financeiros feitos pelo governo federal para garantir a alimentação escolar dos alunos da rede pública.
+- **Estrutura:** Ano_Exercicio (ano em que o repasse foi realizado), UF (Unidade Federativa), Município, Entidade_Responsavel, CNPJ_Responsavel (registro da prefeitura), Quantidade_Alunos, Quantidade_Escolas e Valor_Repasse. 
 
 ## Participação do Grupo
 - **O que aprendemos com este projeto:** Aprendemos na prática como uma política pública nacional, nesse caso o PNAE, se traduz em cálculos concretos no nível de escola e como pequenas variações impactam diretamente o valor do repasse recebido. No Excel, usamos as fórmulas PROCV, SE e SOMARPRODUTO para automatizar esse cálculo a partir de uma tabela de dados e, com isso, transformamos em uma página de site para facilitar a vizualição dos impactos quando mudamos um número. O projeto foi uma boa experiência para aprender a organizar dados oficiais e a disponibilizar esses documentos de forma pública para outras pessoas terem acesso (github).
