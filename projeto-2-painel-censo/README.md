@@ -34,7 +34,7 @@ Imagem da página ao clicar na categoria "Ativa" da tabela "SITUAÇÃO", na cate
   
 - **Papel de cada integrante:**
   - Lorenna: Criou o repositório, adicionou os colaboradores e organizou as pastas. 
-  - Anna Laura: Organizou as pastas e reuniu os prints. 
+  - Anna Laura: Organizou as pastas, escreveu o README e reuniu os prints. 
   - Bárbara: Fez o Excel do projeto 2. 
   - Sofia: Fez o Excel do projeto 2. 
   - Ana Luiza: Subiu o arquivo, escreveu o README do Projeto 2 e registrou a entrega no class. 
