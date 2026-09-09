@@ -50,9 +50,11 @@ Ao final, liste rapidamente quais células da minha planilha inspiraram cada par
 
 ## Participação do Grupo
 - **O que aprendemos com este projeto:** Aprendemos como é possível reunir dados de maneira estratégica para fins analíticos, desde a aquisição dos  dados da fonte até a montagem do dashboard. No Excel, usamos as ferramentas  (segmentação, tabelas dinâmicas e graficos dinâmicos, com isso, transformamos em uma página de site para facilitar a vizualição dos impactos quando mudamos uma categoria na tabela. O projeto foi uma boa experiência para aprender a organizar dados oficiais e a disponibilizar esses documentos de forma pública para outras pessoas terem acesso (github).
+  
 - **Papel de cada integrante:**
-  - Lorenna: Criou o repositório e as pastas.
-  - Caroliny: Fez o upload dos arquivos e  Editou o arquivo README.
-  - Bárbara: 
-  - Sofia: Criou as tabelas dinâmicas
-  - Caroliny: Finalizou o Excel do projeto 1 com Ana Luiza.
+  - Lorenna: Criou o repositório, adicionou os colaboradores e organizou as pastas. 
+  - Anna Laura: Organizou as pastas e fez o Excel do projeto 2. 
+  - Bárbara: Fez o Excel do projeto 2. 
+  - Sofia: Fez o Excel do projeto 2. 
+  - Ana Luiza: Subiu o arquivo, escreveu o README do Projeto 2 e registrou a entrega no class. 
+  - Caroliny: Subiu o arquivo e escreveu o README do Projeto 2.
