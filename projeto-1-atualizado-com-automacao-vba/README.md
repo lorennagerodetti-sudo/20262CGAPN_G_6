@@ -59,9 +59,9 @@ para complementação municipal é fictícia, apenas de exercício. Os dados da 
 `Banco_de_Dados` são simulações de teste.
 
 ### Participação
-   - Bárbara criou o campo de usuário
-   - Ana Luiza, Sofia e Bárbara: atualização do projeto 1 implementando o campo de usuário
-   - Ana Luiza: tirou prints do arquivo
-   - Caroliny: elaboração do README, criação da nova pasta no github e subida do arquivo
-   - Lorena e Ana Laura: atualização e revisão do Github
-
+   - Bárbara: criou o campo de usuário; atualizou o projeto 1 com a implementação do campo de usuário
+   - Ana Luiza: atualizou o projeto 1; tirou os prints do simulador
+   - Caroliny: elaboração do README; subiu o aquivo do simulador; criou a pasta do simulador atualiazado
+   - Sofia: atualizou o projeto 1
+   - Lorenna: atualização e revisão do Github
+   - Ana Laura: atualização e revisão do Github
