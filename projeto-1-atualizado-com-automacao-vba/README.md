@@ -46,13 +46,10 @@ Seguindo a lógica de quatro passos da Aula 11 (cadastro de beneficiário):
 ## Estrutura da pasta
 -  – planilha habilitada para macro
 - `README.md` – este arquivo
-
-## Disclaimers
-
+  
 ### Inteligência Artificial
-[Descreva como o grupo usou (ou não) IA. Ex.: "Usamos o Claude/ChatGPT para tirar
-dúvidas sobre a sintaxe do VBA. O código foi revisado, testado e compreendido
-pelo grupo."]
+A Inteligênicia Artificial foi utilizada foi o Claude para saber em qual linha colocar o msgErro, após subir o arquivo do excel.
+Prompt: Em qual linha coloco o msgErro
 
 ### Dados
 Escola, bairro e matrículas são **fictícios**, criados para fins didáticos. Valores
@@ -62,8 +59,9 @@ para complementação municipal é fictícia, apenas de exercício. Os dados da 
 `Banco_de_Dados` são simulações de teste.
 
 ### Participação
-- Implementação do campo Usuário (criação, leitura, validação, gravação/limpeza): [nome(s)].
-- Testes da automação: [nome(s)], que fizeram [descrever como: 3 simulações, tentativa com Usuário vazio, conferência do Banco_de_Dados].
-- Documentação (README) e organização do GitHub: [nome(s)].
-- [Demais integrantes e suas contribuições.]
-```README afirma isso.
+   - Bárbara criou o campo de usuário
+   - Ana Luiza, Sofia e Bárbara: atualização do projeto 1 implementando o campo de usuário
+   - Ana Luiza: tirou prints do arquivo
+   - Caroliny: elaboração do README, criação da nova pasta no github e subida do arquivo
+   - Lorena e Ana Laura: atualização e revisão do Github
+
