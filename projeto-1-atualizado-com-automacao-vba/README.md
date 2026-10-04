@@ -15,7 +15,7 @@ que, pelo Censo, o número de nascidos está diminuindo. A simulação fica grav
 na aba `Banco_de_Dados` para consulta futura.
 
 ## Como usar
-1. Abra o arquivo 'ativ.erica.xlsm' e clique em **Habilitar Conteúdo/Macros**.
+1. Abra o [arquivo](ativ.erica.xlsm) e clique em **Habilitar Conteúdo/Macros**.
 2. Na aba `Simulador_Escola`, informe seu nome no campo roxo **USUÁRIO** (F2).
 3. Escolha o **Fator de Ajuste** (C26) e explique o motivo no campo **Racional da Taxa** (C25).
 4. Clique no botão que executa a macro `RegistrarSimulacao`.
