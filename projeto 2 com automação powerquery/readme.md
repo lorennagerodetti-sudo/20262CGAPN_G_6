@@ -46,14 +46,14 @@ Etapas do Power Query (painel "Etapas aplicadas" e os Merges):
 
 ## Uso de Inteligência Artificial
 - **Ferramenta utilizada:** Claude
-- **Para que foi usada:** a IA nos ajudou a organizar algumas informações e corrigir algum passo errado que estivesse travando o avanço dos processos, então algum erro de fórmula que não estávamos conseguindo corrigir sozinhas.
+- **Para que foi usada:** a IA nos ajudou a organizar algumas informações e corrigir algum passo errado que estivesse travando o avanço dos processos, então algum erro de fórmula que não estávamos conseguindo corrigir sozinhas. Ademais, o Claude nos ajudou a fazer um readme completo, vendo se alguma informação ou print estava faltando.
 - **O que foi ajustado manualmente:** foi conferido de forma manual a coerência de alguns dados, como por exemplo, se o número de escolas do painel batia com o filtro e se a troca de município estava atualizando o resto das informações
 
 ## Fonte de Dados
 - **Fonte oficial:** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
 - **Link oficial:** `download.inep.gov.br/dados_abertos/microdados_censo_escolar_2024`
 - **O que os dados representam:** as escolas de educação básica do município escolhido, com informações de dependência administrativa, localização, situação de funcionamento, infraestrutura (água, energia, esgoto e lixo) e matrículas.
-- **Estrutura:** a base completa do Censo Escolar 2024 (todos os municípios) e quatro tabelas auxiliares (Dependência, Localização, Localização Diferenciada e Situação). As principais colunas usadas foram: `[LISTAR AS PRINCIPAIS COLUNAS]`.
+- **Estrutura:** a base completa do Censo Escolar 2024 (todos os municípios) e quatro tabelas auxiliares (Dependência, Localização, Localização Diferenciada e Situação). 
 
 ## Participação do Grupo
 - **O que aprendemos com este projeto:** aprendemos a diferença na dinamicidade entre tratar dados com fórumlas e com o Power Query. Além disso, vimos como o Inner Join reduz uma base grande ao município escolhido e como o painel inteiro pode se atualizar com poucos cliques.
