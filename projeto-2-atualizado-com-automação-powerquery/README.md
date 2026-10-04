@@ -26,10 +26,10 @@ O Power Query continua lendo as células de **UF** e **Município** e filtrando 
 - **Aba do dashboard:** depois de preencher o filtro e clicar em **Dados > Atualizar Tudo**, o painel mostra os dados do município escolhido.
 
 ## Como usar
-1. Abra o arquivo `[NOME DO ARQUIVO].xlsx` no Excel (a atualização via Power Query exige o Excel instalado; ela não roda no navegador).
-2. Na aba `[NOME DA ABA DO FILTRO]`, escreva o estado (UF) e o município que deseja analisar, exatamente como aparecem na base do Censo.
+1. Abra o arquivo `Projeto 2 atualizado.xlsx` no Excel (a atualização via Power Query exige o Excel instalado; ela não roda no navegador).
+2. Na aba `Filtro Município`, escreva o estado (UF) e o município que deseja analisar, exatamente como aparecem na base do Censo.
 3. Clique em **Dados > Atualizar Tudo** e aguarde a atualização.
-4. Na aba `Painel de Indicadores`, observe os dados do dashboard. Há 4 segmentações de dados: "SITUAÇÃO", "DEPENDENCIA", "LOCALIZAÇÃO" e "TAM_ESCOLA", cada uma com diferentes categorias.
+4. Na aba `Painel de Indicadores`, observe os dados do dashboard. Há 4 segmentações de dados: "SITUAÇÃO", "DEPENDENCIA", "LOCALIZAÇÃO" e "LocDiferenciada", cada uma com diferentes categorias.
    - Clique em no máximo 1 categoria de cada segmentação. É possível combinar categorias de segmentações diferentes.
    - Analise os resultados por meio dos gráficos dinâmicos.
 
