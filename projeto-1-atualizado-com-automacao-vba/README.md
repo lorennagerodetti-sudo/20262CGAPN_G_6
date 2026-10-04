@@ -15,7 +15,7 @@ que, pelo Censo, o número de nascidos está diminuindo. A simulação fica grav
 na aba `Banco_de_Dados` para consulta futura.
 
 ## Como usar
-1. Abra o arquivo  e clique em **Habilitar Conteúdo/Macros**.
+1. Abra o arquivo 'ativ.erica.xlsm' e clique em **Habilitar Conteúdo/Macros**.
 2. Na aba `Simulador_Escola`, informe seu nome no campo roxo **USUÁRIO** (F2).
 3. Escolha o **Fator de Ajuste** (C26) e explique o motivo no campo **Racional da Taxa** (C25).
 4. Clique no botão que executa a macro `RegistrarSimulacao`.
@@ -60,16 +60,4 @@ para complementação municipal é fictícia, apenas de exercício. Os dados da 
 - Testes da automação: [nome(s)], que fizeram [descrever como: 3 simulações, tentativa com Usuário vazio, conferência do Banco_de_Dados].
 - Documentação (README) e organização do GitHub: [nome(s)].
 - [Demais integrantes e suas contribuições.]
-```
-
----
-
-**Como publicar no GitHub**
-1. No repositório do grupo, clique em *Add file → Create new file* e digite `projeto-1-atualizado-com-automacao-vba/README.md`. Cole o texto acima e dê commit.
-2. Na mesma pasta, use *Add file → Upload files* e suba o `.xlsm`. Confirme que ele foi salvo como **Pasta de Trabalho Habilitada para Macro**.
-3. Tire prints da pasta no GitHub mostrando o `.xlsm` e o README. Eles vão na entrega do eClass, junto com o link do repositório e os prints do Projeto 2, até **30/09 às 23:59**.
-
-**Antes de enviar, confira:**
-- Os trechos entre `[colchetes]` estão preenchidos, principalmente a **Participação**, que o roteiro exige detalhar: quem implementou o campo Usuário e como testaram.
-- A célula do Usuário é mesmo F2 (cuidado com o merge E1:F1 do aviso acima dela).
-- Você fez de fato o teste com Usuário em branco. Se não fez, faça agora e tire o print da mensagem de erro, porque o README afirma isso.
+```README afirma isso.
