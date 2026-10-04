@@ -11,18 +11,24 @@ O município analisado nesta versão é **[MUNICÍPIO] - [UF]**.
 - O tratamento dos dados, que antes era feito por fórmulas, passou a ser feito em etapas no Power Query:
   1. Importação da base completa e das quatro tabelas auxiliares (Dependência, Localização, Localização Diferenciada e Situação).
   2. Criação de uma aba com duas células nomeadas, **UF** e **Município**, transformadas em uma consulta ("De Tabela/Intervalo").
-  3. **Merge com Junção Interna (Inner Join)** entre a base e essa tabela de filtro, pelos campos UF e Município ao mesmo tempo. É este passo que reduz a base ao município do grupo.
+  3. Filtro por município: o Power Query lê as células **UF** e **Município** e filtra a base completa para o município escolhido. O Merge com Inner Join previsto no roteiro não funcionou no nosso arquivo, como explicado em "Mudança durante o desenvolvimento".
   4. **Merges com Junção Esquerda Externa (Left Join)** para trazer Dependência, Localização, Localização Diferenciada e Situação.
   5. **Colunas condicionais** para Tamanho da Escola (pelas faixas de matrícula) e para os indicadores de infraestrutura: Água, Energia, Esgoto e Lixo (prioridade para a primeira coluna binária marcada com 1).
 - A opção "Habilitar atualização em segundo plano" foi desmarcada na consulta principal, para que o **Atualizar Tudo** espere a consulta terminar antes de atualizar as tabelas dinâmicas.
 - **Resultado:** para analisar outro município, basta trocar UF e Município nas células nomeadas e clicar em Atualizar Tudo. Todo o painel muda com um clique.
 
+## Mudança durante o desenvolvimento
+O roteiro previa filtrar a base pelo município com um **Merge de Junção Interna (Inner Join)** entre a base e a tabela de filtro. Não conseguimos fazer esse Merge funcionar da forma prevista. Por isso, o filtro foi aplicado de outro jeito.
+
+O Power Query continua lendo as células de **UF** e **Município** e filtrando a base completa para o município escolhido. Para facilitar o uso, o arquivo tem **duas abas**:
+
+- **Aba de filtro:** o usuário escreve o **estado (UF)** e o **município** que deseja analisar. Há instruções escritas na própria aba.
+- **Aba do dashboard:** depois de preencher o filtro e clicar em **Dados > Atualizar Tudo**, o painel mostra os dados do município escolhido.
+
 ## Como usar
 1. Abra o arquivo `[NOME DO ARQUIVO].xlsx` no Excel (a atualização via Power Query exige o Excel instalado; ela não roda no navegador).
-2. Na aba `[NOME DA ABA DO FILTRO]`, estão as células nomeadas **UF** e **Município**, com o município escolhido.
-3. Para trocar de município:
-   - Altere as duas células (UF e Município), escrevendo o nome exatamente como aparece na base do Censo.
-   - Clique em **Dados > Atualizar Tudo** e aguarde a atualização.
+2. Na aba `[NOME DA ABA DO FILTRO]`, escreva o estado (UF) e o município que deseja analisar, exatamente como aparecem na base do Censo.
+3. Clique em **Dados > Atualizar Tudo** e aguarde a atualização.
 4. Na aba `Painel de Indicadores`, observe os dados do dashboard. Há 4 segmentações de dados: "SITUAÇÃO", "DEPENDENCIA", "LOCALIZAÇÃO" e "TAM_ESCOLA", cada uma com diferentes categorias.
    - Clique em no máximo 1 categoria de cada segmentação. É possível combinar categorias de segmentações diferentes.
    - Analise os resultados por meio dos gráficos dinâmicos.
