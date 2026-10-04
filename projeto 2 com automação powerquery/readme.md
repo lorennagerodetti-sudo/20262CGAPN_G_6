@@ -60,9 +60,9 @@ Etapas do Power Query (painel "Etapas aplicadas" e os Merges):
 - **Papel de cada integrante nesta etapa:**
   - Lorenna: elaboração do readme
   - Anna Laura: elaboração do readme
-  - Bárbara: [PAPEL]
+  - Bárbara: atualização do projeto
   - Sofia: atualização do projeto
-  - Ana Luiza: [PAPEL]
-  - Caroliny: [PAPEL]
+  - Ana Luiza: atualização do projeto
+  - Caroliny: criação da nova pasta no github, subiu os arquivos e revisou
 - **Como o grupo testou a atualização:** [DESCREVER: quais municípios foram testados, quem testou e o que foi conferido]
 
