@@ -45,10 +45,9 @@ Etapas do Power Query (painel "Etapas aplicadas" e os Merges):
 [INSERIR PRINT]
 
 ## Uso de Inteligência Artificial
-- **Ferramenta utilizada:** [FERRAMENTA(S)]
-- **Para que foi usada:** [DESCREVER O QUE FOI FEITO COM A IA NESTA ETAPA, por exemplo dúvidas sobre Merge, colunas condicionais ou atualização]
-- **Exemplo de prompt utilizado:** "[COLAR UM PROMPT REAL]"
-- **O que foi ajustado manualmente:** [DESCREVER O QUE O GRUPO CONFERIU E CORRIGIU, por exemplo se o número de escolas do painel bate com o filtro, se a troca de município atualiza tudo]
+- **Ferramenta utilizada:** Claude
+- **Para que foi usada:** a IA nos ajudou a organizar algumas informações e corrigir algum passo errado que estivesse travando o avanço dos processos, então algum erro de fórmula que não estávamos conseguindo corrigir sozinhas.
+- **O que foi ajustado manualmente:** foi conferido de forma manual a coerência de alguns dados, como por exemplo, se o número de escolas do painel batia com o filtro e se a troca de município estava atualizando o resto das informações
 
 ## Fonte de Dados
 - **Fonte oficial:** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
@@ -57,12 +56,12 @@ Etapas do Power Query (painel "Etapas aplicadas" e os Merges):
 - **Estrutura:** a base completa do Censo Escolar 2024 (todos os municípios) e quatro tabelas auxiliares (Dependência, Localização, Localização Diferenciada e Situação). As principais colunas usadas foram: `[LISTAR AS PRINCIPAIS COLUNAS]`.
 
 ## Participação do Grupo
-- **O que aprendemos com este projeto:** [ESCREVER COM AS PALAVRAS DO GRUPO. Sugestão de pontos: a diferença entre tratar dados com fórmulas e com Power Query; como o Inner Join reduz uma base grande ao município escolhido; como o painel inteiro se atualiza com um clique.]
+- **O que aprendemos com este projeto:** aprendemos a diferença na dinamicidade entre tratar dados com fórumlas e com o Power Query. Além disso, vimos como o Inner Join reduz uma base grande ao município escolhido e como o painel inteiro pode se atualizar com poucos cliques.
 - **Papel de cada integrante nesta etapa:**
-  - Lorenna: [PAPEL]
-  - Anna Laura: [PAPEL]
+  - Lorenna: elaboração do readme
+  - Anna Laura: elaboração do readme
   - Bárbara: [PAPEL]
-  - Sofia: [PAPEL]
+  - Sofia: atualização do projeto
   - Ana Luiza: [PAPEL]
   - Caroliny: [PAPEL]
 - **Como o grupo testou a atualização:** [DESCREVER: quais municípios foram testados, quem testou e o que foi conferido]
