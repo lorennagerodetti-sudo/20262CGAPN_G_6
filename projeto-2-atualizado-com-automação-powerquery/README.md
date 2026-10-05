@@ -34,21 +34,26 @@ O Power Query continua lendo as células de **UF** e **Município** e filtrando 
    - Analise os resultados por meio dos gráficos dinâmicos.
 
 ## Prints dos resultados
-Painel com o município **[MUNICÍPIO A]**:
+Painel com o município **Catunda**:
 
-[INSERIR PRINT]
+<img width="791" height="368" alt="image" src="https://github.com/user-attachments/assets/25071bca-a490-40fb-bfb2-9ea32a500576" /> 
 
-Painel após trocar para o município **[MUNICÍPIO B]** e clicar em Atualizar Tudo:
 
-[INSERIR PRINT]
+Painel após trocar para o município **São Paulo** e clicar em 'Atualizar Tudo' e com segmentações aplicadas (**Tamanho da escola (baseado em critérios não oficiais), situação (ativa ou inativa), dependência (estadual, federal, municipal ou privada), localização (rural ou urbana) e localização diferenciada (não, comunidades tradicionais, terra indígena, assentamento ou comunidade quilombola)**:
 
-Painel com segmentações aplicadas (**[CATEGORIAS ESCOLHIDAS]**):
+<img width="778" height="359" alt="image" src="https://github.com/user-attachments/assets/450146e0-fb18-41c6-b4bf-ab78f9131fa8" />
 
-[INSERIR PRINT]
 
 Etapas do Power Query (painel "Etapas aplicadas" e os Merges):
 
-[INSERIR PRINT]
+<img width="680" height="346" alt="image" src="https://github.com/user-attachments/assets/af783750-80f5-47de-819f-5453fc862708" />
+<img width="683" height="347" alt="image" src="https://github.com/user-attachments/assets/501e2def-f07e-4ee0-9e0d-13511df79590" />
+
+<img width="751" height="383" alt="image" src="https://github.com/user-attachments/assets/dd4b41bd-457c-49a4-9591-b38b8cbdb36e" />
+<img width="682" height="347" alt="image" src="https://github.com/user-attachments/assets/6f9983f8-bc51-4c12-a2b7-004a3f40c349" />
+<img width="679" height="347" alt="image" src="https://github.com/user-attachments/assets/0d3ddff1-44e6-4295-b725-29aea6562955" />
+
+
 
 ## Uso de Inteligência Artificial
 - **Ferramenta utilizada:** Claude
@@ -58,7 +63,7 @@ Etapas do Power Query (painel "Etapas aplicadas" e os Merges):
 - **Fonte oficial:** Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (INEP).
 - **Link oficial:** `download.inep.gov.br/dados_abertos/microdados_censo_escolar_2024`
 - **O que os dados representam:** as escolas de educação básica do município escolhido, com informações de dependência administrativa, localização, situação de funcionamento, infraestrutura (água, energia, esgoto e lixo) e matrículas.
-- **Estrutura:** a base completa do Censo Escolar 2024 (todos os municípios) e quatro tabelas auxiliares (Dependência, Localização, Localização Diferenciada e Situação). As principais colunas usadas foram: `[LISTAR AS PRINCIPAIS COLUNAS]`.
+- **Estrutura:** a base completa do Censo Escolar 2024 (todos os municípios) e quatro tabelas auxiliares (Dependência, Localização, Localização Diferenciada e Situação).
 
 ## Participação do Grupo
 - **O que aprendemos com este projeto:** aprendemos a diferença na dinamicidade entre tratar dados com fórumlas e com o Power Query. Além disso, vimos como o Inner Join reduz uma base grande ao município escolhido e como o painel inteiro pode se atualizar com poucos cliques
@@ -69,4 +74,4 @@ Etapas do Power Query (painel "Etapas aplicadas" e os Merges):
   - Sofia: atualização do projeto
   - Ana Luiza: atualização do projeto
   - Caroliny: criação da nova pasta no github, subiu os arquivos e revisou os dados
-- **Como o grupo testou a atualização:** [DESCREVER: quais municípios foram testados, quem testou e o que foi conferido]
+- **Como o grupo testou a atualização:** testamos com o município de São Paulo e Catunda, a Sofia, Bárbara e Ana Luiza ficaram na responsabilidade de testar o painel.
