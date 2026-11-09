@@ -53,10 +53,11 @@ Prompt: Em qual linha coloco o msgErro
 
 ### Dados
 Escola, bairro e matrículas são **fictícios**, criados para fins didáticos. Valores
-per capita, dias letivos e a regra de cálculo do repasse seguem a Resolução
-CD/FNDE nº 1/2026 (que altera a Res. CD/FNDE nº 6/2020). A regra de elegibilidade
+per capita, dias letivos e a regra de cálculo do repasse seguem a [Resolução CD/FNDE nº 1/2026](https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2026/resolucao-cd_fnde-no-1-de-18-de-fevereiro-de-2026-dou-imprensa-nacional.pdf/@@display-file/file) (que altera a Res. CD/FNDE nº 6/2020). A regra de elegibilidade
 para complementação municipal é fictícia, apenas de exercício. Os dados da aba
 `Banco_de_Dados` são simulações de teste.
+
+
 
 ### Participação
    - Bárbara: criou o campo de usuário; atualizou o projeto 1 com a implementação do campo de usuário
