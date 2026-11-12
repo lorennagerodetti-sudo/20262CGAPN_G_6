@@ -3,7 +3,7 @@
 ## Objetivo
 Este projeto organiza e cruza dados do Censo Escolar de 2024 em um painel (dashboard) interativo no Excel, construído com tabelas dinâmicas, gráficos dinâmicos e segmentação de dados. O objetivo é reunir, em uma única tela, informações sobre as escolas de um município escolhido pelo grupo, facilitando a visualização dos dados.
 
-O município analisado nesta versão é **[MUNICÍPIO] - [UF]**.
+O município analisado nesta versão é **Catunda - CE**.
 
 ## O que mudou em relação à versão anterior
 - **Antes:** o painel usava um recorte já pronto da cidade de São Paulo (cerca de 8 mil linhas), colado na planilha. Dependência, Localização, Situação e Tamanho da Escola eram calculados por fórmulas do Excel (PROCV e SE) dentro da própria aba de dados.
