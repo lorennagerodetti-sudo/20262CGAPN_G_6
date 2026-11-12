@@ -1,0 +1,3 @@
+Nesse repositório é possível encontrar dois projetos referentes a *Educação*. O primeiro projeto ****SIMULADOR DE REPASSE DO PNAE**** ele simula o cálculo do repasse financeiro do PNAE (Programa Nacional de Alimentação Escolar) para uma escola, com base no número de matrículas por modalidade de ensino no excel, e está incorporada uma automação em VBA que registra cada simulação em um banco de dados dentro da própria planilha. O segundo projeto ****PAINEL CENSO**** ele organiza e cruza dados do Censo Escolar de 2024 em um dashboarde no excel.
+
+Integrantes de projeto: Bárbara, Ana Luiza, Caroliny, Sofia, Lorenna, Ana Laura
