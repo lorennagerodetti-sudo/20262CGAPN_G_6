@@ -60,6 +60,7 @@ para complementação municipal é fictícia, apenas de exercício. Os dados da 
 
 
 ### Participação
+Por meio da atualização do Projeto 1, o grupo aprendeu a como manusear a automação no VBA tendo que lidar com camadas: Frontend, Backend, Camada de Negócio e Banco de Dados, mesclando conhecimentos de excel e programação no VBA, a partir dele é possível não apenas uma interação com o usuário, mas também o registro de seus dados, como eles ficam gravados no Banco de dados.
    - Bárbara: criou o campo de usuário; atualizou o projeto 1 com a implementação do campo de usuário
    - Ana Luiza: atualizou o projeto 1; tirou os prints do simulador
    - Caroliny: elaboração do README; subiu o aquivo do simulador; criou a pasta do simulador atualiazado
