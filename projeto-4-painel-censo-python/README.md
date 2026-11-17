@@ -1,10 +1,12 @@
 # Painel Interativo do Censo Escolar em Python
 
+Este é o **Projeto 4** do repositório, que reúne quatro projetos sobre educação, repasse de verbas e organização e reagrupamento de dados. Ele é a versão em Python do painel do Censo Escolar feito em Excel no Projeto 2.
+
 ## Objetivo
 
 Este painel mostra as escolas em atividade de 30 municípios de quatro regiões do estado de São Paulo (Região Metropolitana, Baixada Santista, Litoral Norte e Vale do Ribeira), com base no Censo Escolar 2024. Ele permite filtrar as escolas por região e por dependência administrativa e ver, ao mesmo tempo, o total de escolas, o total de matrículas, as características e a infraestrutura das escolas, a localização de cada uma no mapa e a lista completa das escolas selecionadas. Pode ser usado para comparar rapidamente as condições das escolas entre regiões e identificar onde há mais carência de infraestrutura.
 
-É a versão em Python (pandas + Streamlit) do painel construído em Excel no Projeto 2.
+O pandas carrega e organiza os dados, e o Streamlit monta a página interativa, que roda no navegador a partir de um script.
 
 ## Como usar
 
@@ -26,7 +28,7 @@ python -m streamlit run painel.py
 
 O painel abre automaticamente no navegador. Se não abrir, acesse o endereço mostrado no terminal (normalmente `http://localhost:8501`).
 
-**5. Usar os filtros:** na barra lateral, escolha uma região e/ou uma dependência administrativa. Todos os indicadores, gráficos, o mapa e a lista de escolas são recalculados juntos com as escolas selecionadas. Para ver o estado geral, deixe os filtros em "Todos".
+**5. Usar os filtros:** escolha uma região e/ou uma dependência administrativa. Todos os indicadores, gráficos, o mapa e a lista de escolas são recalculados juntos com as escolas selecionadas. Para ver o conjunto completo, deixe os filtros em "Todos".
 
 ## Prints do resultado
 
@@ -96,6 +98,7 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 | `regiao` | Região do estado: Região Metropolitana de SP, Baixada Santista, Litoral Norte ou Vale do Ribeira |
 | `municipio` | Município da escola |
 | `dependencia` | Federal, Estadual, Municipal ou Privada |
+| `localizacao` | Urbana ou Rural |
 | `porte` | Pequena, Média ou Grande (criada no programa com a função `classificar_porte`) |
 | `agua` | Principal forma de abastecimento de água |
 | `esgoto` | Principal forma de esgotamento sanitário |
@@ -108,6 +111,9 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 
 **Papel de cada integrante**
 
-- **[Nome 1]:** [o que fez no projeto]
-- **[Nome 2]:** [o que fez no projeto]
-- **[Nome 3]:** [o que fez no projeto]
+- Lorenna: Revisou as informações e organizou o github.
+- Ana Laura: Revisou as informações e organizou o github.
+- Bárbara: Fez o readme
+- Sofia: Fez o readme
+- Ana Luiza: Completou o projeto 3
+- Caroliny: Completou o projeto 3
