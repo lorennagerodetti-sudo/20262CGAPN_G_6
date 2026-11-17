@@ -80,6 +80,6 @@ Cobertura do repasse:      44,1%
 Diferença a cobrir:        R$ 8.696,00
 ```
 
-Print do terminal: `<img width="1280" height="862" alt="print proejto 3" src="https://github.com/user-attachments/assets/26fefae2-6a44-4faf-9116-c868d5e67592" />
+Print do terminal: <img width="1280" height="862" alt="print proejto 3" src="https://github.com/user-attachments/assets/26fefae2-6a44-4faf-9116-c868d5e67592" />
 `<img width="1280" height="801" alt="print 3 2" src="https://github.com/user-attachments/assets/56e14df9-ff8d-4cad-9bb0-5edfc1955e08" />
 ).
