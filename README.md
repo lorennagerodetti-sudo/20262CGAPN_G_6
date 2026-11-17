@@ -111,9 +111,9 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 
 **Papel de cada integrante**
 
-- **Bárbara:** [o que fez no projeto]
-- **Ana Luiza:** [o que fez no projeto]
-- **Caroliny:** [o que fez no projeto]
-- **Sofia:** [o que fez no projeto]
-- **Lorenna:** [o que fez no projeto]
-- **Ana Laura:** [o que fez no projeto]
+- Lorenna: Revisou as informações e organizou o github.
+- Ana Laura: Revisou as informações e organizou o github.
+- Bárbara: Fez o readme
+- Sofia: Fez o readme
+- Ana Luiza: Completou o projeto 3
+- Caroliny: Completou o projeto 3
