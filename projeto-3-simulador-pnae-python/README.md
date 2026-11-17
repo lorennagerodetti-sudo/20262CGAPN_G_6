@@ -41,7 +41,8 @@ Simulador rodando com os dados da escola escolhida (200 dias letivos, 3 matrícu
 
 Código do simulador (parâmetros no topo, funções em seguida e programa principal no final):
 
-<img width="1280" height="801" alt="codigos" src="https://github.com/user-attachments/assets/4cfb7afe-e89b-4560-85f9-4b436288e543" />
+<img width="2816" height="1762" alt="printatualizado" src="https://github.com/user-attachments/assets/4de6c4b1-6577-4217-828c-791f38b48c3a" />
+
 
 
 ## Escola simulada
@@ -166,7 +167,7 @@ O código segue a estrutura vista em aula: parâmetros no topo, funções em seg
 
 **Exemplo de prompt utilizado:** "com base nessas infos e nos prints, faça o readme" (enviando o enunciado do Projeto 3, o texto anterior do README, o notebook e os prints do terminal).
 
-**O que foi ajustado manualmente:** *[o grupo deve descrever aqui o que revisou e alterou depois da resposta da IA, por exemplo: conferência dos números, revisão da reflexão com as leituras, ajustes de texto.]*
+**O que foi ajustado manualmente:** Manualmente nós conferimos se os números batiam com os que o simulador deu, conferimos coerência de contas de multiplicação e a reflexão também foi feita em conjunto e foi sendo manualmente alterada.
 
 ## Fonte de Dados
 
