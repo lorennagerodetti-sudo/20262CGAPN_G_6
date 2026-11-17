@@ -169,7 +169,7 @@ O código segue a estrutura vista em aula: parâmetros no topo, funções em seg
 
 ## Fonte de Dados
 
-**Fontes oficiais:** Censo Escolar 2024 (INEP) e Resolução CD/FNDE nº 1, de 18/02/2026 (DOU de 19/02/2026).
+**Fontes oficiais:** Censo Escolar 2024 (INEP) e [Resolução CD/FNDE nº 1/2026](https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2026/resolucao-cd_fnde-no-1-de-18-de-fevereiro-de-2026-dou-imprensa-nacional.pdf/@@display-file/file).
 
 **Links oficiais:**
 
