@@ -131,7 +131,6 @@ As leituras de apoio indicam por que esse ponto é sensível. O debate sobre o f
 
 Quando a diferença não é coberta pelo município ou estado, as consequências recaem sobre os alunos: cardápios com menos variedade, menos alimentos frescos e in natura, menor quantidade nas porções ou substituição por produtos mais baratos e menos nutritivos. Para muitas crianças, a refeição escolar é a principal refeição do dia, então a falta de recursos pode afetar a nutrição, a frequência e o desempenho escolar. O efeito tende a ser maior em creches e em escolas de tempo integral, que servem mais refeições por aluno.
 
-> **Atenção:** esta reflexão resume os temas gerais do debate. Antes de entregar, o grupo deve conferir e, se quiser, citar diretamente os pontos das três leituras indicadas no enunciado (Todos Pela Educação, 2023; Observatório da Alimentação Escolar, 21/10/2025; Brasil de Fato, 16/10/2025).
 
 ### Simplificações do simulador
 
