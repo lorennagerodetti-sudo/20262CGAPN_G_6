@@ -188,6 +188,9 @@ O código segue a estrutura vista em aula: parâmetros no topo, funções em seg
 
 **Papel de cada integrante:**
 
-- *[Nome 1]*: *[o que fez no projeto]*
-- *[Nome 2]*: *[o que fez no projeto]*
-- *[Nome 3]*: *[o que fez no projeto]*
+Lorenna: Revisou as informações e organizou o github.
+Anna Laura: Revisou as informações e organizou o github.
+Bárbara: Fez o readme
+Sofia: Fez o readme
+Ana Luiza: Completou o projeto 3
+Caroliny: Completou o projeto 3
