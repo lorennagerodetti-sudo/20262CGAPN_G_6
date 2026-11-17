@@ -176,7 +176,7 @@ O código segue a estrutura vista em aula: parâmetros no topo, funções em seg
 **Links oficiais:**
 
 - Censo Escolar / Catálogo de Escolas (INEP): <https://www.gov.br/inep/pt-br/acesso-a-informacao/dados-abertos/inep-data/catalogo-de-escolas>
-- Resolução CD/FNDE nº 1/2026: *[colar aqui o link da resolução usado no Projeto 1]*
+- Resolução CD/FNDE nº 1/2026: [Resolução CD/FNDE nº 1/2026](https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2026/resolucao-cd_fnde-no-1-de-18-de-fevereiro-de-2026-dou-imprensa-nacional.pdf/@@display-file/file)
 
 **O que os dados representam:** o Censo Escolar é a principal pesquisa estatística da educação básica no Brasil, feita anualmente pelo INEP, e traz informações sobre escolas, matrículas e infraestrutura. A resolução do FNDE define os valores per capita que o governo federal repassa por aluno, por dia letivo, para a alimentação escolar.
 
