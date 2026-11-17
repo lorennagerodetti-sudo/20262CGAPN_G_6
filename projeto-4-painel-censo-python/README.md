@@ -96,7 +96,6 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 | `regiao` | Região do estado: Região Metropolitana de SP, Baixada Santista, Litoral Norte ou Vale do Ribeira |
 | `municipio` | Município da escola |
 | `dependencia` | Federal, Estadual, Municipal ou Privada |
-| `localizacao` | Urbana ou Rural |
 | `porte` | Pequena, Média ou Grande (criada no programa com a função `classificar_porte`) |
 | `agua` | Principal forma de abastecimento de água |
 | `esgoto` | Principal forma de esgotamento sanitário |
