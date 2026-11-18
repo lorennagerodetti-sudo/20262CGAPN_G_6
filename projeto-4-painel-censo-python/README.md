@@ -4,7 +4,7 @@ Este é o **Projeto 4** do repositório, que reúne quatro projetos sobre educa�
 
 ## Objetivo
 
-Este painel mostra as escolas em atividade de 30 municípios de quatro regiões do estado de São Paulo (Região Metropolitana, Baixada Santista, Litoral Norte e Vale do Ribeira), com base no Censo Escolar 2024. Ele permite filtrar as escolas por região e por dependência administrativa e ver, ao mesmo tempo, o total de escolas, o total de matrículas, as características e a infraestrutura das escolas, a localização de cada uma no mapa e a lista completa das escolas selecionadas. Pode ser usado para comparar rapidamente as condições das escolas entre regiões e identificar onde há mais carência de infraestrutura.
+Este painel mostra as escolas em atividade de 30 municípios de quatro regiões do estado de São Paulo (Região Metropolitana, Baixada Santista, Litoral Norte e Vale do Ribeira), com base no Censo Escolar 2024. Ele permite filtrar as escolas por região, por porte e por dependência administrativa e ver, ao mesmo tempo, o total de escolas, o total de matrículas, gráficos com as características e a infraestrutura das escolas (abastecimento de água e coleta de lixo), a localização de cada uma no mapa e a lista das escolas selecionadas. Pode ser usado para comparar rapidamente as condições das escolas entre regiões e identificar onde há mais carência de infraestrutura.
 
 O pandas carrega e organiza os dados, e o Streamlit monta a página interativa, que roda no navegador a partir de um script.
 
@@ -28,34 +28,37 @@ python -m streamlit run painel.py
 
 O painel abre automaticamente no navegador. Se não abrir, acesse o endereço mostrado no terminal (normalmente `http://localhost:8501`).
 
-**5. Usar os filtros:** escolha uma região e/ou uma dependência administrativa. Todos os indicadores, gráficos, o mapa e a lista de escolas são recalculados juntos com as escolas selecionadas. Para ver o conjunto completo, deixe os filtros em "Todos".
+**5. Usar os filtros:** escolha uma região, um porte e/ou uma dependência administrativa. Os indicadores, os gráficos, o mapa e a lista de escolas são recalculados juntos com as escolas selecionadas. Para ver o conjunto completo, deixe os filtros em "Todas".
 
 ## Prints do resultado
 
-<img width="1279" height="511" alt="Captura de tela 2026-11-17 154440" src="https://github.com/user-attachments/assets/8a530611-0e80-46b8-a407-b2e90db74bf3" />
-<img width="1279" height="830" alt="Captura de tela 2026-11-17 154401" src="https://github.com/user-attachments/assets/8def0bae-c663-4510-9b79-2836a14be744" />
-<img width="1279" height="774" alt="Captura de tela 2026-11-17 154336" src="https://github.com/user-attachments/assets/0b984cf4-0fef-4053-be46-5d04bc196eb2" />
-<img width="1279" height="826" alt="Captura de tela 2026-11-17 154315" src="https://github.com/user-attachments/assets/cb13767d-2e7b-4f21-b1d0-44fe72d6de0b" />
+<img width="1279" height="511" alt="Captura de tela 2026-11-17 154440" src="https://github.com/user-attachments/assets/9716de3d-9145-49f2-9b59-2cdebb7d8214" />
+<img width="1279" height="830" alt="Captura de tela 2026-11-17 154401" src="https://github.com/user-attachments/assets/5e79ae40-574d-4927-a156-731e4624d2e0" />
+<img width="1279" height="774" alt="Captura de tela 2026-11-17 154336" src="https://github.com/user-attachments/assets/13b51bd7-4ff7-49bb-a520-1504990d0fb3" />
+<img width="1279" height="826" alt="Captura de tela 2026-11-17 154315" src="https://github.com/user-attachments/assets/c3d22bdb-fdef-4abb-b317-791047f791e2" />
 
 
 ## Elementos do painel
 
 | Tipo | Elemento | Coluna da base usada |
 | --- | --- | --- |
-| Indicador | Total de escolas | contagem de linhas da base filtrada |
-| Indicador | Total de matrículas | [coluna de matrículas da base] |
+| Indicador | Qtde de escolas | contagem de linhas da base filtrada |
+| Indicador | Total de matrículas | `matriculas` |
 | Filtro | Região | `regiao` |
+| Filtro | Porte | `porte` (criada pela função `classifica_porte`) |
 | Filtro | Dependência administrativa | `dependencia` |
-| Gráfico de características | Escolas por porte | `porte` (criada pela função `classificar_porte`) |
-| Gráfico de características | Escolas por localização (urbana ou rural) | `localizacao` |
-| Gráfico de infraestrutura | Escolas por forma de abastecimento de água | `agua` |
-| Gráfico de infraestrutura | Escolas por forma de esgotamento sanitário | `esgoto` |
+| Gráfico de características | Escolas por porte | `porte` |
+| Gráfico de características | Escolas por dependência | `dependencia` |
+| Gráfico de infraestrutura | Escolas por abastecimento de água | `agua` |
+| Gráfico de infraestrutura | Escolas por coleta de lixo | `lixo` |
 | Mapa | Cada escola como um ponto | `latitude` e `longitude` |
-| Lista | Escolas que atendem aos filtros | [colunas exibidas, por exemplo `municipio`, `dependencia`, `localizacao`, `porte`] |
+| Lista | Escolas que atendem aos filtros | `regiao`, `municipio`, `escola`, `dependencia`, `matriculas` e `porte` |
+
+O porte é calculado pelo número de matrículas da escola: até 200 matrículas é **Pequena**, de 201 a 400 é **Média** e acima de 400 é **Grande**.
 
 ## O que o painel mostra
 
-[Escrevam aqui, depois de testar o painel, um parágrafo curto com uma diferença real entre regiões ou municípios que apareceu ao usar os filtros. Por exemplo: comparem a forma de abastecimento de água ou de esgotamento sanitário entre "todas as regiões" e o Vale do Ribeira, citando os números ou proporções que vocês viram no gráfico.]
+[Escrevam aqui, depois de testar o painel, um parágrafo curto com uma diferença real entre regiões ou municípios que apareceu ao usar os filtros. Por exemplo: comparem a forma de abastecimento de água ou de coleta de lixo entre "todas as regiões" e o Vale do Ribeira, citando os números ou proporções que vocês viram no gráfico.]
 
 ## Organização do programa
 
@@ -63,29 +66,28 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 
 | Parte do código | O que faz | Correspondente no painel do Projeto 2 (Excel) |
 | --- | --- | --- |
-| Função `classificar_porte` | Classifica cada escola como Pequena, Média ou Grande a partir do número de matrículas | Coluna calculada com fórmula na base |
+| Função `classifica_porte` | Classifica cada escola como Pequena, Média ou Grande a partir do número de matrículas | Coluna calculada com fórmula na base |
 | Carregamento dos dados | Lê o arquivo `escolas_sp_regioes_2024_geo.csv` com o pandas | Aba com a base de dados |
-| Filtros | Seleção de região e de dependência, aplicada à base inteira | Segmentação de dados |
-| Indicadores | Total de escolas e total de matrículas das escolas filtradas | Big numbers do dash |
-| Gráficos | Contagem de escolas por porte, localização, água e esgoto | Gráficos dinâmicos |
+| Filtros | Seleção de região, porte e dependência, aplicada à base | Segmentação de dados |
+| Indicadores | Quantidade de escolas e total de matrículas das escolas filtradas | Big numbers do dash |
+| Gráficos | Contagem de escolas por porte, dependência, água e coleta de lixo | Gráficos dinâmicos |
 | Mapa | Pontos com a latitude e a longitude das escolas filtradas | [elemento correspondente, se houver, ou "novo no Projeto 4"] |
 | Lista de escolas | Tabela com as escolas que atendem aos filtros | Tabela com os dados filtrados |
 
 ## Uso de Inteligência Artificial
 
-**Ferramenta utilizada:** [nome da ferramenta, por exemplo Claude]
+**Ferramenta utilizada:** Claude
 
-**Para que foi usada:** [descrevam, por exemplo: tirar dúvidas sobre o Streamlit, ajudar a adicionar o segundo filtro e os gráficos extras, revisar erros de código]
+**Para que foi usada:** tirar dúvidas sobre o Streamlit, ajudar a adicionar filtros e gráficos, revisar erros de código
 
-**Exemplo de prompt utilizado:** [colem aqui um prompt real usado pelo grupo]
+**Exemplo de prompt utilizado:** "Claude, veja se os códigos estão coerentes em relação ao que as instruções pedem."
 
-**O que foi ajustado manualmente:** [descrevam os ajustes feitos depois da resposta da IA, por exemplo: conferência dos nomes das opções dos filtros com `value_counts()`, testes das combinações de filtros, textos do painel]
+**O que foi ajustado manualmente:** ajustamos manualmente a coerência dos nomes das colunas e das opções dos filtros, assim como testes das combinações de filtros e a adaptação do README ao código final já revisado.
 
 ## Fonte de Dados
 
 **Fonte oficial:** Censo Escolar 2024 (INEP)
 
-**Link oficial:** [colem aqui o link da fonte]
 
 **O que os dados representam:** A base reúne as escolas em atividade de 30 municípios de quatro regiões do estado de São Paulo, com suas características, sua infraestrutura e sua localização geográfica. Cada linha corresponde a uma escola. Os dados são do Censo Escolar 2024, a principal pesquisa estatística sobre a educação básica no Brasil, realizada pelo INEP.
 
@@ -95,23 +97,23 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 | --- | --- |
 | `regiao` | Região do estado: Região Metropolitana de SP, Baixada Santista, Litoral Norte ou Vale do Ribeira |
 | `municipio` | Município da escola |
-| `dependencia` | Federal, Estadual, Municipal ou Privada |
-| `localizacao` | Urbana ou Rural |
-| `porte` | Pequena, Média ou Grande (criada no programa com a função `classificar_porte`) |
-| `agua` | Principal forma de abastecimento de água |
-| `esgoto` | Principal forma de esgotamento sanitário |
+| `escola` | Nome da escola |
+| `dependencia` | Municipal, Estadual, Federal ou Privada |
+| `matriculas` | Número de matrículas da escola |
+| `porte` | Pequena, Média ou Grande (criada no programa com a função `classifica_porte`, a partir de `matriculas`) |
+| `agua` | Forma de abastecimento de água da escola |
+| `lixo` | Forma de coleta de lixo da escola |
 | `latitude`, `longitude` | Coordenadas geográficas da escola, usadas no mapa |
-| [coluna de matrículas] | Número de matrículas da escola, usado no indicador e no porte |
 
 ## Participação do Grupo
 
-**O que aprendemos com este projeto:** [descrevam, por exemplo: como o pandas organiza e filtra os dados, como o Streamlit transforma um script em página interativa, e as diferenças entre fazer o painel em Excel e em Python]
+**O que aprendemos com este projeto:** Em geral, aprendemos como o pandas organiza e filtra os dados, como o Streamlit transforma um script em página interativa, e as diferenças entre fazer o painel em Excel e em Python.
 
 **Papel de cada integrante**
 
-- Lorenna: Revisou as informações e organizou o github.
-- Ana Laura: Revisou as informações e organizou o github.
-- Bárbara: Fez o readme
-- Sofia: Fez o readme
-- Ana Luiza: Completou o projeto 3
-- Caroliny: Completou o projeto 3
+- **Lorenna:** Revisou as informações e organizou o GitHub.
+- **Ana Laura:** Revisou as informações e organizou o GitHub.
+- **Bárbara:** Fez o README.
+- **Sofia:** Fez o README.
+- **Ana Luiza:** Completou o Projeto 3.
+- **Caroliny:** Completou o Projeto 3.
