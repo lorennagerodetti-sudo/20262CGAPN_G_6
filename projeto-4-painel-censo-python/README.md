@@ -32,13 +32,11 @@ O painel abre automaticamente no navegador. Se não abrir, acesse o endereço mo
 
 ## Prints do resultado
 
-**Todas as regiões selecionadas**
+<img width="1279" height="511" alt="Captura de tela 2026-11-17 154440" src="https://github.com/user-attachments/assets/8a530611-0e80-46b8-a407-b2e90db74bf3" />
+<img width="1279" height="830" alt="Captura de tela 2026-11-17 154401" src="https://github.com/user-attachments/assets/8def0bae-c663-4510-9b79-2836a14be744" />
+<img width="1279" height="774" alt="Captura de tela 2026-11-17 154336" src="https://github.com/user-attachments/assets/0b984cf4-0fef-4053-be46-5d04bc196eb2" />
+<img width="1279" height="826" alt="Captura de tela 2026-11-17 154315" src="https://github.com/user-attachments/assets/cb13767d-2e7b-4f21-b1d0-44fe72d6de0b" />
 
-![Painel com todas as regiões](prints/print_todas_regioes.png)
-
-**Vale do Ribeira selecionado**
-
-![Painel com o Vale do Ribeira](prints/print_vale_do_ribeira.png)
 
 ## Elementos do painel
 
