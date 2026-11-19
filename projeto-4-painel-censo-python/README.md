@@ -23,7 +23,7 @@ python -m pip install pandas streamlit
 **4. Rodar o painel** (a partir da pasta do projeto):
 
 ```bash
-python -m streamlit run painel.py
+python -m streamlit run Painel.py
 ```
 
 O painel abre automaticamente no navegador. Se não abrir, acesse o endereço mostrado no terminal (normalmente `http://localhost:8501`).
