@@ -32,10 +32,10 @@ O painel abre automaticamente no navegador. Se não abrir, acesse o endereço mo
 
 ## Prints do resultado
 
-<img width="1279" height="511" alt="Captura de tela 2026-11-17 154440" src="https://github.com/user-attachments/assets/9716de3d-9145-49f2-9b59-2cdebb7d8214" />
-<img width="1279" height="830" alt="Captura de tela 2026-11-17 154401" src="https://github.com/user-attachments/assets/5e79ae40-574d-4927-a156-731e4624d2e0" />
-<img width="1279" height="774" alt="Captura de tela 2026-11-17 154336" src="https://github.com/user-attachments/assets/13b51bd7-4ff7-49bb-a520-1504990d0fb3" />
 <img width="1279" height="826" alt="Captura de tela 2026-11-17 154315" src="https://github.com/user-attachments/assets/c3d22bdb-fdef-4abb-b317-791047f791e2" />
+<img width="1279" height="774" alt="Captura de tela 2026-11-17 154336" src="https://github.com/user-attachments/assets/13b51bd7-4ff7-49bb-a520-1504990d0fb3" />
+<img width="1279" height="830" alt="Captura de tela 2026-11-17 154401" src="https://github.com/user-attachments/assets/5e79ae40-574d-4927-a156-731e4624d2e0" />
+<img width="1279" height="511" alt="Captura de tela 2026-11-17 154440" src="https://github.com/user-attachments/assets/9716de3d-9145-49f2-9b59-2cdebb7d8214" />
 
 
 ## Elementos do painel
