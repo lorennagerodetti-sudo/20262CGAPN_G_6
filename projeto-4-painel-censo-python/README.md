@@ -33,16 +33,20 @@ python -m pip install pandas streamlit
 python -m streamlit run Painel.py
 ```
 
-O painel abre automaticamente no navegador. Se não abrir, acesse o endereço mostrado no terminal (normalmente `http://localhost:8501`).
+O painel abre automaticamente no navegador
 
 **5. Usar os filtros:** escolha uma região, um porte e/ou uma dependência administrativa. Os indicadores, os gráficos, o mapa e a lista de escolas são recalculados juntos com as escolas selecionadas. Para ver o conjunto completo, deixe os filtros em "Todas".
 
 ## Prints do resultado
 
+**Combinação de filtros 1**
+
 <img width="1279" height="826" alt="Captura de tela 2026-11-17 154315" src="https://github.com/user-attachments/assets/c3d22bdb-fdef-4abb-b317-791047f791e2" />
 <img width="1279" height="774" alt="Captura de tela 2026-11-17 154336" src="https://github.com/user-attachments/assets/13b51bd7-4ff7-49bb-a520-1504990d0fb3" />
 <img width="1279" height="830" alt="Captura de tela 2026-11-17 154401" src="https://github.com/user-attachments/assets/5e79ae40-574d-4927-a156-731e4624d2e0" />
 <img width="1279" height="511" alt="Captura de tela 2026-11-17 154440" src="https://github.com/user-attachments/assets/9716de3d-9145-49f2-9b59-2cdebb7d8214" />
+
+**Combinação de filtros 2**
 
 
 ## Elementos do painel
