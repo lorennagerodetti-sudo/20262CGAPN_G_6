@@ -46,8 +46,15 @@ O painel abre automaticamente no navegador
 <img width="1279" height="830" alt="Captura de tela 2026-11-17 154401" src="https://github.com/user-attachments/assets/5e79ae40-574d-4927-a156-731e4624d2e0" />
 <img width="1279" height="511" alt="Captura de tela 2026-11-17 154440" src="https://github.com/user-attachments/assets/9716de3d-9145-49f2-9b59-2cdebb7d8214" />
 
+
+
 **Combinação de filtros 2**
 
+
+<img width="1279" height="798" alt="Captura de tela 2026-11-19 174633" src="https://github.com/user-attachments/assets/55b7f27c-cffb-4ad1-bf49-61cab88acb8c" />
+<img width="1279" height="771" alt="Captura de tela 2026-11-19 174657" src="https://github.com/user-attachments/assets/2757606b-b332-4e6a-91bd-cbbe5e696fa9" />
+<img width="1279" height="827" alt="Captura de tela 2026-11-19 174729" src="https://github.com/user-attachments/assets/fc1d1bd2-504f-44de-b3df-e8bb71ff7af3" />
+<img width="1279" height="428" alt="Captura de tela 2026-11-19 174808" src="https://github.com/user-attachments/assets/7b11ec21-ffce-4cc9-b20e-d4faac26b32a" />
 
 ## Elementos do painel
 
