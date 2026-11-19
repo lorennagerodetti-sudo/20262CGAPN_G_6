@@ -8,7 +8,7 @@ Pode ser usado para entender, com números de uma escola real, se o valor federa
 
 ## Como usar
 
-**O que é preciso ter:** Python 3 instalado. O programa não usa nenhuma biblioteca externa.
+**O que é preciso ter:** Python instalado. O programa não usa nenhuma biblioteca externa.
 
 **Como rodar no terminal:**
 
