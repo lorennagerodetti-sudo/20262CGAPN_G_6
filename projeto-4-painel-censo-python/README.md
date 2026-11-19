@@ -77,6 +77,7 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 ## Uso de Inteligência Artificial
 
 **Ferramenta utilizada:** Gemini
+
 **Para que foi usada:** Explicar um erro de código
 
 **Exemplo de prompt utilizado:** "O que é SyntaxError: unterminated string literal"
