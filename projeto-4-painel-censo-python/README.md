@@ -10,18 +10,25 @@ O pandas carrega e organiza os dados, e o Streamlit monta a página interativa, 
 
 ## Como usar
 
-**1. Pré-requisitos:** ter o Python 3 instalado.
+**1. Pré-requisitos:** ter o Python instalado.
 
-**2. Baixar a pasta:** clone o repositório ou baixe a pasta `projeto-4-painel-censo-python` e mantenha os arquivos `painel.py` e `escolas_sp_regioes_2024_geo.csv` juntos, na mesma pasta.
+**2. Baixar a pasta:** clone o repositório ou baixe a pasta `projeto-4-painel-censo-python` e mantenha os arquivos `Painel.py` e `escolas_sp_regioes_2024_geo.csv` juntos, na mesma pasta.
 
 **3. Instalar os pacotes:**
 
+- Abra o Terminal da máquina (no sistema Windows, por exemplo, é o aplicativo Prompt de Comando)
+- Digite:
 ```bash
 python -m pip install pandas streamlit
 ```
 
-**4. Rodar o painel** (a partir da pasta do projeto):
+**4. Rodar o painel** 
 
+- Para localizar a pasta do projeto no terminal, digite `cd` com um espaço depois das letras, sem apertar o Enter. Abra o gerenciador de arquivos do computador e encontre a pasta desejada. Clique na pasta, segure e arraste-a para dentro da janela preta do terminal. O caminho completo da pasta vai aparecer automaticamente. Clique na janela do terminal para selecioná-la e aperte Enter.
+- Se a pasta estiver em outro disco rígido no Windows (por exemplo, no disco D: em vez do C:), o comando cd sozinho não muda de disco. É preciso primeiro digitar `D:` e apertar Enter, para só depois usar o `cd`.
+
+- Com a pasta localizada, digite:
+  
 ```bash
 python -m streamlit run Painel.py
 ```
@@ -88,6 +95,7 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 
 **Fonte oficial:** Censo Escolar 2024 (INEP)
 
+**Link oficial:** https://download.inep.gov.br/censo_escolar/resultados/2024/apresentacao_coletiva.pdf 
 
 **O que os dados representam:** A base reúne as escolas em atividade de 30 municípios de quatro regiões do estado de São Paulo, com suas características, sua infraestrutura e sua localização geográfica. Cada linha corresponde a uma escola. Os dados são do Censo Escolar 2024, a principal pesquisa estatística sobre a educação básica no Brasil, realizada pelo INEP.
 
