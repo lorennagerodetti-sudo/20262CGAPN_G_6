@@ -76,13 +76,12 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 
 ## Uso de Inteligência Artificial
 
-**Ferramenta utilizada:** Claude
+**Ferramenta utilizada:** Gemini
+**Para que foi usada:** Explicar um erro de código
 
-**Para que foi usada:** tirar dúvidas sobre o Streamlit, ajudar a adicionar filtros e gráficos, revisar erros de código
+**Exemplo de prompt utilizado:** "O que é SyntaxError: unterminated string literal"
 
-**Exemplo de prompt utilizado:** "Claude, veja se os códigos estão coerentes em relação ao que as instruções pedem."
-
-**O que foi ajustado manualmente:** ajustamos manualmente a coerência dos nomes das colunas e das opções dos filtros, assim como testes das combinações de filtros e a adaptação do README ao código final já revisado.
+**O que foi ajustado manualmente:** A identificação e correção do erro
 
 ## Fonte de Dados
 
