@@ -80,7 +80,7 @@ O porte é calculado pelo número de matrículas da escola: até 200 matrículas
 
 ## O que o painel mostra
 
-[Escrevam aqui, depois de testar o painel, um parágrafo curto com uma diferença real entre regiões ou municípios que apareceu ao usar os filtros. Por exemplo: comparem a forma de abastecimento de água ou de coleta de lixo entre "todas as regiões" e o Vale do Ribeira, citando os números ou proporções que vocês viram no gráfico.]
+A combinação 1 filtra escolas municipais da Região Metropolitana de SP. A 2, escolas de pequeno porte da região do Litoral Norte. 
 
 ## Organização do programa
 
