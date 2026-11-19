@@ -4,7 +4,7 @@
 Este projeto simula o cálculo do repasse financeiro do PNAE (Programa Nacional de Alimentação Escolar) para uma escola, com base no número de matrículas por modalidade de ensino (creche, pré-escola, fundamental, médio, EJA, indígena/quilombola e AEE) e nos valores per capita definidos para cada uma. O simulador também classifica o porte da escola, verifica elegibilidade para complementação municipal e permite testar cenários de variação nas matrículas.
 
 ## Como usar
-1. Abra a planilha `Projeto_1_-_final.xlsx` para ver o simulador completo, com as fórmulas (SE, PROCV, SOMARPRODUTO e a Tabela de Dados).
+1. Abra a planilha `Projeto 1 - final.xlsx` para ver o simulador completo, com as fórmulas (SE, PROCV, SOMARPRODUTO e a Tabela de Dados).
 2. Abra o arquivo `simulador_pnae.html` no navegador para interagir com a versão visual do simulador:
    - Edite as quantidades de matrículas por modalidade na tabela principal e veja o repasse recalculado automaticamente.
    - Use o campo de "Fator de Ajuste" para simular variações nas matrículas.
