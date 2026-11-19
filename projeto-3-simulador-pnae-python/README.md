@@ -1,4 +1,4 @@
-# Simulador PNAE – Projeto 3
+# Simulador de Repasse do PNAE – Projeto 3
 
 ## Objetivo
 
