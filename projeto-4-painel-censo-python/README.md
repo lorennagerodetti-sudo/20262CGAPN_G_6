@@ -47,7 +47,7 @@ O painel abre automaticamente no navegador
 <img width="1279" height="511" alt="Captura de tela 2026-11-17 154440" src="https://github.com/user-attachments/assets/9716de3d-9145-49f2-9b59-2cdebb7d8214" />
 
 
-
+<br>
 **Combinação de filtros 2**
 
 
