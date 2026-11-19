@@ -137,6 +137,6 @@ O arquivo `painel.py` segue a ordem vista em aula: função, carregamento dos da
 - **Lorenna:** Revisou as informações e organizou o GitHub.
 - **Ana Laura:** Revisou as informações e organizou o GitHub.
 - **Bárbara:** Fez o README.
-- **Sofia:** Fez o README.
+- **Caroliny:** Fez o README.
 - **Ana Luiza:** Completou o Projeto 4.
-- **Caroliny:** Completou o Projeto 4.
+- **Sofia:** Completou o Projeto 4.
