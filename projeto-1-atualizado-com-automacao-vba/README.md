@@ -43,6 +43,11 @@ Seguindo a lógica de quatro passos da Aula 11 (cadastro de beneficiário):
 3. **Validar:** em `ValidarSimulacao`, se `usuario` estiver em branco, exibe erro e impede o registro.
 4. **Gravar e limpar:** o usuário é gravado na coluna G do Banco de Dados e o campo é limpo em `LimparCampos`.
 
+## Testes realizados
+Depois de concluir o código VBA, voltamos à planilha para testar o campo do usuário:
+1. **Com todos os campos preenchidos:** preenchemos o nome do usuário e o racional da taxa, salvamos e o registro foi gravado normalmente na aba `Banco_de_Dados`.
+2. **Sem o nome do usuário:** repetimos o teste deixando o campo Usuário vazio e o salvamento foi bloqueado, como esperado, porque programamos a validação para exigir que as informações estejam preenchidas juntas.
+
 ## Estrutura da pasta
 -  – planilha habilitada para macro
 - `README.md` – este arquivo
