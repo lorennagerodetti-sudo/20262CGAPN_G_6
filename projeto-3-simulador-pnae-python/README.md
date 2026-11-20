@@ -36,8 +36,8 @@ Também é possível abrir o `Projeto3.ipynb` no Jupyter e executar a célula.
 ## Prints do resultado
 
 Simulador rodando com os dados da escola escolhida (200 dias letivos, 3 matrículas na creche, 2 na pré-escola e 49 no ensino fundamental):
+<img width="1408" height="881" alt="image" src="https://github.com/user-attachments/assets/f7ae75a0-baa8-46b5-b032-780b8fb7a336" />
 
-<img width="1280" height="862" alt="simulador 200" src="https://github.com/user-attachments/assets/094e1bff-88c4-4c97-8377-d5f1a4c2d471" />
 
 Código do simulador (parâmetros no topo, funções em seguida e programa principal no final):
 
